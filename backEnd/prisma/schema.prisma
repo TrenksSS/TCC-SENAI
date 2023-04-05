@@ -1,0 +1,73 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Funcionario {
+  id    Int    @id @default(autoincrement())
+  nome  String
+  email String
+  senha String
+  cargo String
+  nivel String
+}
+
+model Piloto {
+  id        Int        @id @default(autoincrement())
+  cpf       String     @unique
+  nome      String
+  status    String
+  voos   Voos[]
+}
+
+model Veiculo {
+  id          Int          @id @default(autoincrement())
+  modelo      String
+  marca       String
+  tipo        String
+  cod_Identificacion String
+  disponibilidade  String    
+  manutencoes Manutencao[]
+  voos   Voos[]
+}
+
+model Manutencao {
+  id          Int       @id @default(autoincrement())
+  data_inicio DateTime  @default(now())
+  data_fim    DateTime?
+  valor       Float
+  descricao   String
+  id_veiculo  Int
+  veiculo     Veiculo   @relation(fields: [id_veiculo], references: [id])
+}
+
+model Voos {
+  id           Int       @id @default(autoincrement())
+  id_piloto Int
+  id_veiculo   Int
+  data_saida   DateTime  @default(now())
+  valor Float?
+  destino String
+  descricao    String
+  piloto    Piloto @relation(fields: [id_piloto], references: [id])
+  veiculo   Veiculo   @relation(fields: [id_veiculo], references: [id])
+  tripulacoes Tripulacao[]
+  passagens   Passagem[]
+}
+
+
+model Passagem{
+  id Int @id @default(autoincrement())
+  voo Voos @relation(fields: [id], references: [id])
+
+}
+
+model Tripulacao{
+  id Int @id @default(autoincrement())
+  voo Voos @relation(fields: [id], references: [id])
+
+}
