@@ -30,7 +30,7 @@ model Veiculo {
   id   Int  @id @default(autoincrement())
   empresa  String
   tipo  String
-  cod_Identificacion String
+  cod_Idf String
   status  String    
   manutencoes Manutencao[]
   voos   Voo[]
