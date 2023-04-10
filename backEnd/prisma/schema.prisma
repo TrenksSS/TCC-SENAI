@@ -17,23 +17,22 @@ model Funcionario {
 }
 
 model Piloto {
-  id        Int        @id @default(autoincrement())
-  cpf       String     @unique
-  nome      String
-  status    String
-  voos   Voo[]
+  id          Int          @id @default(autoincrement())
+  cpf         String       @unique
+  nome        String
+  status      String
+  voos        Voo[]
   tripulacoes Tripulacao[]
-
 }
 
 model Veiculo {
-  id   Int  @id @default(autoincrement())
-  empresa  String
-  tipo  String
-  cod_Idf String
-  status  String    
+  id          Int          @id @default(autoincrement())
+  empresa     String
+  tipo        String
+  cod_Idf     String
+  status      String
   manutencoes Manutencao[]
-  voos   Voo[]
+  voos        Voo[]
 }
 
 model Manutencao {
@@ -47,40 +46,61 @@ model Manutencao {
 }
 
 model Voo {
-  id           Int       @id @default(autoincrement())
-  id_piloto Int
-  id_veiculo   Int
-  data_saida   DateTime  @default(now())
-  hora  DateTime @default(now())
-  destino String
-  descricao    String
-  piloto    Piloto @relation(fields: [id_piloto], references: [id])
-  veiculo   Veiculo   @relation(fields: [id_veiculo], references: [id])
+  id          Int          @id @default(autoincrement())
+  id_piloto   Int
+  id_veiculo  Int
+  data_saida  DateTime     @default(now())
+  hora        DateTime     @default(now())
+  destino     String
+  descricao   String
+  piloto      Piloto       @relation(fields: [id_piloto], references: [id])
+  veiculo     Veiculo      @relation(fields: [id_veiculo], references: [id])
   tripulacoes Tripulacao[]
   passagens   Passagem[]
 }
 
-
-model Passagem{
-  id Int @id @default(autoincrement())
-  valor Float
-  tipo String
-  poltrona String
-  descricao String
-  voo Voo @relation(fields: [id], references: [id])
-
+model Passageiro {
+  id   Int    @id @default(autoincrement())
+  nome String
+  cpf String
+  passaporte String
+  data_nascimento String
+  nacionalidade String
+  email String?
+  senha String?
+  passagens Passagem[]
+  contatos Contato []
 }
 
-model Tripulacao{
+model Contato{
   id Int @id @default(autoincrement())
-  id_voo Int
-  id_piloto Int
-  copiloto String
-  comissarios String
-  engenheiro_voo String?
-  navigator String?
-  tecnico_manutencao String?
-  piloto    Piloto @relation(fields: [id_piloto], references: [id])
-  voo Voo @relation(fields: [id], references: [id])
+  id_passageiro Int
+  numero_tel String
+  tipo String
+  passageiro    Passageiro @relation(fields: [id_passageiro], references: [id])
+}
 
+model Passagem {
+  id            Int        @id @default(autoincrement())
+  valor         Float
+  tipo          String
+  id_voo        Int
+  id_passageiro Int
+  poltrona      String
+  descricao     String
+  voo           Voo        @relation(fields: [id_voo], references: [id])
+  passageiro    Passageiro @relation(fields: [id_passageiro], references: [id])
+}
+
+model Tripulacao {
+  id                 Int     @id @default(autoincrement())
+  id_voo             Int
+  id_piloto          Int
+  copiloto           String
+  comissarios        String
+  engenheiro_voo     String?
+  navigator          String?
+  tecnico_manutencao String?
+  piloto             Piloto  @relation(fields: [id_piloto], references: [id])
+  voo                Voo     @relation(fields: [id], references: [id])
 }
