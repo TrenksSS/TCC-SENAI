@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(163, 223, 203);
+}
+
+.inp{
+    width: 300px;
+    height: 40px;
+    background-color: rgb(204, 204, 200);
+    border: 1px;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 5px;
+}
+
+/* ---------------------------------------------------------------------------------- CARD LOGIN */
+#card-login{
+    border-radius: 5px;
+    left: 70vw;
+    bottom: 100px;
+    position: absolute;
+    width: 20vw;
+    height: 50vh;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.form{
+    position: relative;
+    left: 30px;
+    top: 20px;
+}
+
+#btLogin{
+    position: absolute;
+    bottom: -50px;
+    left: 35px;
+    width: 250px;
+    height: 40px;
+    background-color: rgb(95, 175, 149);
+    border: 0;
+    border-radius: 5px;
+}
+#btLogin:hover{
+    transition: 0.3s;
+    background-color: rgb(123, 228, 195);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+/* ----------------------------------------------------------------------------------------- / */
