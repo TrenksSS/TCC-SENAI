@@ -14,6 +14,7 @@ model Funcionario {
   senha String
   cargo String
   nivel String
+  status String
 }
 
 model Piloto {
@@ -71,6 +72,8 @@ model Passageiro {
   passagens Passagem[]
   contatos Contato []
 }
+
+
 
 model Contato{
   id Int @id @default(autoincrement())

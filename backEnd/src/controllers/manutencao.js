@@ -4,76 +4,76 @@ const prisma = new PrismaClient();
 
 const create = async (req, res) => {
     
-    let piloto = await prisma.piloto.create({
+    let manutencao = await prisma.manutencao.create({
         data: req.body
     });
 
-    res.status(200).json(piloto).end();
+    res.status(200).json(manutencao).end();
 }
 
 const readOne = async (req, res) => {
-    let piloto = await prisma.piloto.findUnique({
+    let manutencao = await prisma.manutencao.findUnique({
         where: {
             id: Number(req.params.id)
         },
         select: {
             id:true,
-            nome: true,
-            cpf:true,
-            status:true,
-            tripulacoes: true,
-            voos:true
+            id_veiculo: true,
+            data_inicio:true,
+            data_fim:true,
+            descricao:true,
+            valor:true
         }
     });
 
-    res.status(200).json(piloto).end();
+    res.status(200).json(manutencao).end();
 }
 
 const read = async (req, res) => {
-    let pilotos = await prisma.piloto.findMany({
+    let manutencoes = await prisma.manutencao.findMany({
         select: {
             id:true,
-            nome: true,
-            cpf:true,
-            status:true,
-            tripulacoes: true,
-            voos:true
+            id_veiculo: true,
+            data_inicio:true,
+            data_fim:true,
+            descricao:true,
+            valor:true
         }
     });
 
-    res.status(200).json(pilotos).end();
+    res.status(200).json(manutencoes).end();
 }
 
 
 const update = async (req, res) => {
-    const piloto = await prisma.piloto.update({
+    const manutencao = await prisma.manutencao.update({
         where: {
             id: Number(req.params.id)
         },
         data: req.body
     })
 
-    res.status(200).json(piloto).end()
+    res.status(200).json(manutencao).end()
 }
 
 const remove = async (req, res) => {
-    const piloto = await prisma.piloto.delete({
+    const manutencao = await prisma.manutencao.delete({
         where: {
             id: Number(req.params.id)
         }
     })
-    res.status(200).json(piloto).end()
+    res.status(200).json(manutencao).end()
 }
 
 const removeStatus = async (req, res) => {
-    const piloto = await prisma.piloto.update({
+    const manutencao = await prisma.manutencao.update({
         where: {
             id: Number(req.params.id)
         },
         data: req.body
     })
 
-    res.status(200).json(piloto).end()
+    res.status(200).json(manutencao).end()
 }
 
 module.exports = {
