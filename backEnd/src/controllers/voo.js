@@ -3,7 +3,9 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 const create = async (req, res) => {
-    
+    req.body.id_piloto = Number(req.body.id_piloto)
+    req.body.id_veiculo = Number(req.body.id_veiculo)
+
     let voo = await prisma.voo.create({
         data: req.body
     });
