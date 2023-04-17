@@ -10,11 +10,7 @@ const Contato =  require('../controllers/contato')
 const Manutencao =  require('../controllers/manutencao')
 const Tripulacao =  require('../controllers/tripulacao')
 const Passagem =  require('../controllers/passagem')
-
-
-
-
-
+const Middleware = require('../middleware/validation')
 
 
 router.post('/pilotos', Piloto.create)
@@ -24,12 +20,15 @@ router.put('/pilotos/:id', Piloto.update)
 router.put('/pilotos/status/:id', Piloto.removeStatus)
 router.delete('/pilotos/:id', Piloto.remove)
  
-router.post('/funcionario', Func.create)
-router.put('/funcionario/:id', Func.update)
-router.put('/funcionario/status/:id', Func.removeStatus)
-router.delete('/funcionario/:id', Func.remove)
-router.get('/funcionario', Func.read)
-router.get('/funcionario/:id', Func.readOne)
+router.post('/funcionarios', Func.create)
+router.post('/funcionarios/login', Func.login)
+router.put('/funcionarios/:id', Func.update)
+router.put('/funcionarios/status/:id', Func.removeStatus)
+router.delete('/funcionarios/:id', Func.remove)
+router.get('/funcionarios', Func.read)
+router.get('/funcionarios/:id', Func.readOne)
+router.post('/funcionarios/validate', Middleware.permitir)
+
 
 router.post('/veiculos', Veiculo.create)
 router.put('/veiculos/:id', Veiculo.update)

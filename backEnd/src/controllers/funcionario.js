@@ -1,5 +1,7 @@
 const { PrismaClient } = require('@prisma/client');
 const bcrypt = require('bcrypt')
+const jwt = require("jsonwebtoken")
+
 
 const prisma = new PrismaClient();
 
@@ -26,6 +28,38 @@ const create = async (req, res) => {
       })
 }
 
+const login = async(req, res) => {
+    const funcionario = await prisma.funcionario.findFirstOrThrow({
+      where: {
+        email: req.body.email
+      }
+    }).then((value) => {return(value)})
+    .catch((err) => {return {"erro": "Funcionário não encontrado", "validation": false}})
+
+    if (funcionario.erro == null) {
+      bcrypt.compare(req.body.senha, funcionario.senha).then((value) => {
+        if (value) {
+          let data = {"uid": funcionario.id, "role": funcionario.nivel}
+          jwt.sign(data, process.env.KEY, {expiresIn: '1  h'}, function(err2, token) {
+            if(err2 == null){
+  
+                res.status(200).json({"token": token, "uid": funcionario.id, "uname": funcionario.nome, "nivel": funcionario.nivel, "validation": true}).end()
+            } else {
+                res.status(500).json(err2).end()
+            }
+            
+          })  
+        } else {
+          res.status(201).json({"erro": "Senha inválida", "validation": false}).end()
+        }
+      })
+    } else {
+      res.status(404).json(funcionario).end()
+    }
+
+    
+}
+
 const readOne = async (req, res) => {
     let funcionario = await prisma.funcionario.findUnique({
         where: {
@@ -36,7 +70,8 @@ const readOne = async (req, res) => {
             nome: true,
             cargo:true,
             nivel:true,
-            status: true,
+            email:true,
+            status: true
         }
     });
 
@@ -50,6 +85,7 @@ const read = async (req, res) => {
             nome: true,
             cargo:true,
             nivel:true,
+            email:true,
             status: true,
         }
     });
@@ -91,6 +127,7 @@ const removeStatus = async (req, res) => {
 
 module.exports = {
     create,
+    login,
     update,
     remove,
     removeStatus,
