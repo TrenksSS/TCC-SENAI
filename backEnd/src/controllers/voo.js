@@ -25,7 +25,10 @@ const readOne = async (req, res) => {
             data_saida:true,
             destino:true,
             hora:true,
-            descricao:true
+            descricao:true,
+            passagens:true,
+            tripulacoes:true
+
         }
     });
 
@@ -41,7 +44,9 @@ const read = async (req, res) => {
             data_saida:true,
             destino:true,
             hora:true,
-            descricao:true
+            descricao:true,
+            passagens:true,
+            tripulacoes:true
         }
     });
 

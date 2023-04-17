@@ -17,8 +17,10 @@ const readOne = async (req, res) => {
             id: Number(req.params.id)
         },
         select: {
-           numero_tel:true,
-           tipo:true
+            id:true,
+            numero_tel:true,
+            id_passageiro:true,
+            tipo:true
         }
     });
 
@@ -28,7 +30,9 @@ const readOne = async (req, res) => {
 const read = async (req, res) => {
     let contatos = await prisma.contato.findMany({
         select: {
+            id:true,
             numero_tel:true,
+            id_passageiro:true,
             tipo:true
         }
     });

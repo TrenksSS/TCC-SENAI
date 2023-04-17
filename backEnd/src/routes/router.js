@@ -7,6 +7,12 @@ const Veiculo = require('../controllers/veiculo')
 const Voo =  require('../controllers/voo')
 const Passageiro =  require('../controllers/passageiro')
 const Contato =  require('../controllers/contato')
+const Manutencao =  require('../controllers/manutencao')
+const Tripulacao =  require('../controllers/tripulacao')
+const Passagem =  require('../controllers/passagem')
+
+
+
 
 
 
@@ -25,11 +31,11 @@ router.delete('/funcionario/:id', Func.remove)
 router.get('/funcionario', Func.read)
 router.get('/funcionario/:id', Func.readOne)
 
-router.post('/veiculo', Veiculo.create)
-router.put('/veiculo/:id', Veiculo.update)
-router.delete('/veiculo/:id', Veiculo.remove)
-router.get('/veiculo', Veiculo.read)
-router.get('/veiculo/:id', Veiculo.readOne)
+router.post('/veiculos', Veiculo.create)
+router.put('/veiculos/:id', Veiculo.update)
+router.delete('/veiculos/:id', Veiculo.remove)
+router.get('/veiculos', Veiculo.read)
+router.get('/veiculos/:id', Veiculo.readOne)
 
 router.post('/voos', Voo.create);
 router.get('/voos', Voo.read);
@@ -52,5 +58,23 @@ router.get('/contatos', Contato.read)
 router.get('/contatos/:id', Contato.readOne)
 router.put('/contatos/:id', Contato.update)
 router.delete('/contatos/:id', Contato.remove)
+
+router.post('/manutencoes', Manutencao.create)
+router.get('/manutencoes', Manutencao.read)
+router.get('/manutencoes/:id', Manutencao.readOne)
+router.put('/manutencoes/:id', Manutencao.update)
+router.delete('/manutencoes/:id', Manutencao.remove)
+
+router.post('/tripulacoes', Tripulacao.create)
+router.get('/tripulacoes', Tripulacao.read)
+router.get('/tripulacoes/:id', Tripulacao.readOne)
+router.put('/tripulacoes/:id', Tripulacao.update)
+router.delete('/tripulacoes/:id', Tripulacao.remove)
+
+router.post('/passagens', Passagem.create)
+router.get('/passagens', Passagem.read)
+router.get('/passagens/:id', Passagem.readOne)
+router.put('/passagens/:id', Passagem.update)
+router.delete('/passagens/:id', Passagem.remove)
 
 module.exports = router;

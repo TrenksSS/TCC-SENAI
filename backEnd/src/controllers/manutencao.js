@@ -3,6 +3,9 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 const create = async (req, res) => {
+   
+    req.body.valor = Number(req.body.valor)
+    req.body.id_veiculo = Number(req.body.id_veiculo)
     
     let manutencao = await prisma.manutencao.create({
         data: req.body
