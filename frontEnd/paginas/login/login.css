@@ -21,6 +21,12 @@ body{
     padding: 5px;
 }
 
+#img-pagina{
+    position: absolute;
+    left: 20%;
+    top: 30%;
+}
+
 /* ---------------------------------------------------------------------------------- CARD LOGIN */
 #content{
     position: relative;
@@ -50,7 +56,7 @@ border-radius: 5px
 #card-login{
     border-radius: 5px;
     left: 70vw;
-    bottom: 100px;
+    bottom: 200px;
     position: absolute;
     width: 20vw;
     height: 50vh;

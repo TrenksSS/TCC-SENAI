@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: auto;
+}
+
+header {
+    margin: 0;
+    border: 0;
+    width: 100vw;
+    height: 10vh;
+    background-color: rgb(255, 255, 255);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+/* -------------------------------------------HEADER */
+
+#logo {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    cursor: pointer;
+}
+
+#titulo {
+    position: absolute;
+    left: 5%;
+    top: 2.5%;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------CAROCEL */
+
+.carousel-item img {
+    width: 30vw;
+    height: 30vh;
+    border-radius: 15px;
+}
+
+.carousel {
+    position: absolute;
+    left: 50vw;
+    top: 10vh;
+}
+
+#mold1 {
+    position: absolute;
+    top: 10vh;
+    left: -2vw;
+
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(63, 154, 207);
+
+    width: 22vw;
+    height: 30vh;
+    border-radius: 15px;
+}
+
+#mold2 {
+    position: absolute;
+    top: 10vh;
+    left: 70vw;
+
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(63, 154, 207);
+
+    width: 21.1vw;
+    height: 30vh;
+    border-radius: 15px;
+}
+
+#propaganda {
+    display: flex;
+    position: absolute;
+    border-radius: 15px;
+    top: 10vh;
+    left: 20vw;
+    width: 30vw;
+    height: 30vh;
+    background-color: rgb(63, 154, 207);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#busca {
+    position: absolute;
+    left: 10vw;
+    top: 30vh;
+    width: 80vw;
+    height: 20vh;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgb(255, 255, 255) 43%, rgba(255, 255, 255, 0.815) 100%);
+    z-index: 2;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
