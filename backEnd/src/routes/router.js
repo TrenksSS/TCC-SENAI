@@ -45,12 +45,11 @@ router.put('/voos/:id/status', Voo.removeStatus);
 
 router.post('/passageiros', Passageiro.create);
 router.post('/passageiros/crypt', Passageiro.createCrypt);
-
+router.post('/passageiros/login', Passageiro.login);
 router.get('/passageiros', Passageiro.read);
 router.get('/passageiros/:id', Passageiro.readOne);
 router.put('/passageiros/:id', Passageiro.update);
 router.delete('/passageiros/:id', Passageiro.remove);
-router.put('/passageiros/:id/status', Passageiro.removeStatus);
 
 router.post('/contatos', Contato.create)
 router.get('/contatos', Contato.read)

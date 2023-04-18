@@ -1,5 +1,6 @@
 const { PrismaClient } = require('@prisma/client');
 const bcrypt = require('bcrypt')
+const jwt = require("jsonwebtoken")
 
 const prisma = new PrismaClient();
 
@@ -35,6 +36,38 @@ const createCrypt = async (req, res) => {
      
        }
     
+       const login = async(req, res) => {
+        const passageiro = await prisma.passageiro.findFirstOrThrow({
+          where: {
+            email: req.body.email
+          }
+        }).then((value) => {return(value)})
+        .catch((err) => {return {"erro": "Passageiro não encontrado", "validation": false}})
+    
+        if (passageiro.erro == null) {
+          bcrypt.compare(req.body.senha, passageiro.senha).then((value) => {
+            if (value) {
+              let data = {"uid": passageiro.id, "role": passageiro.role}
+              jwt.sign(data, process.env.KEY, {expiresIn: '1  h'}, function(err2, token) {
+                if(err2 == null){
+      
+                    res.status(200).json({"token": token, "uid": passageiro.id, "uname": passageiro.nome, "role": passageiro.role, "validation": true}).end()
+                } else {
+                    res.status(500).json(err2).end()
+                }
+                
+              })  
+            } else {
+              res.status(201).json({"erro": "Senha inválida", "validation": false}).end()
+            }
+          })
+        } else {
+          res.status(404).json(passageiro).end()
+        }
+    
+        
+    }
+
 
 const readOne = async (req, res) => {
     let passageiro = await prisma.passageiro.findUnique({
@@ -48,6 +81,7 @@ const readOne = async (req, res) => {
             passaporte: true,
             data_nascimento: true,
             nacionalidade: true,
+            email: true,
             passagens: true,
             contatos: true
         }
@@ -66,6 +100,7 @@ const read = async (req, res) => {
             data_nascimento: true,
             nacionalidade: true,
             passagens: true,
+            email: true,
             contatos: true
         }
     });
@@ -94,23 +129,14 @@ const remove = async (req, res) => {
     res.status(200).json(passageiro).end()
 }
 
-const removeStatus = async (req, res) => {
-    const passageiro = await prisma.passageiro.update({
-        where: {
-            id: Number(req.params.id)
-        },
-        data: req.body
-    })
 
-    res.status(200).json(passageiro).end()
-}
 
 module.exports = {
     createCrypt,
     create,
+    login,
     update,
     remove,
-    removeStatus,
     read,
     readOne
 }

@@ -67,6 +67,7 @@ model Passageiro {
   passaporte String  @unique
   data_nascimento String
   nacionalidade String
+  role String @default("Passageiro")
   email String?
   senha String?
   passagens Passagem[]
