@@ -12,6 +12,7 @@ header {
 }
 
 body {
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
@@ -67,7 +68,7 @@ body {
 #mold2 {
     position: absolute;
     top: 10vh;
-    left: 70vw;
+    left: 80vw;
 
     border-width: 10px;
     border-style: solid;
@@ -102,4 +103,34 @@ body {
     z-index: 2;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+#img-busca{
+    top: 4vh;
+    left: 4vw;
+    position: absolute;
+    width: 30px;
+}
+#texto1{
+    top: 4vh;
+    left: 6vw;
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+}
+#busca-geral{
+    position: absolute;
+    width: 40vw;
+    height: 5vh;
+    border-radius: 10px;
+    top: 12vh;
+    left: 3vw;
+}
+#buscar-p{
+    position: absolute;
+    top: 12vh ;
+    left: 70vw;
+    width: 7vw;
+    height: 5vh;
+    border-radius: 15px;
 }
