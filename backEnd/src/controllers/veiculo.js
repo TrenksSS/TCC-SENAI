@@ -21,6 +21,7 @@ const readOne = async (req, res) => {
         select: {
             id:true,
             empresa: true,
+            cod_Idf:true,
             tipo:true,
             status:true,
             manutencoes:true,
@@ -38,6 +39,7 @@ const read = async (req, res) => {
             empresa: true,
             tipo:true,
             status:true,
+            cod_Idf:true,
             manutencoes:true,
             voos:true
         }

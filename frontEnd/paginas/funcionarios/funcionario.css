@@ -101,36 +101,92 @@ main{
 }
 
 .divCards{
-    height: 80vh;
-    padding: 20px;
-    width: 100%;
-}
-
-.cardPrin{
     display: flex;
-    flex-direction: wrap;
-    align-items: left;
-    gap: 3%;
-    border: 3px solid black;
-    height: 75vh;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    height: 58.5vh;
     padding: 20px;
     width: 90%;
     margin-left: 4%;
-    margin-top: 1.5%;
+    margin-top: 7.5%;
     border-radius: 15px;
+}
+
+.cardPrin{
+    width: 20%;
+    height: 34vh;
 }
 
 .cardVoo{
     display: flex;
     height: 13vh;
+    width: 100%;
     padding: 2%;
     border-radius: 10px;
     margin-top: 1%;
     margin-left: 1.5%;
+    height: 16vh;
+    text-align: left;
+    justify-content: center;
+    padding: 5.5%;
+    padding-left: 5%;
     flex-direction: column;
-    border: 3px solid black;
+    /* border: 3px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
 }
 
+#passageiroNovo{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    width: 20%;
+    padding: 0.5%;
+    position: absolute;
+    left:4.5%;
+    top: 14%;
+    font-size: 25px;
+}
+
+#btnCadPassageiro{
+    position: absolute;
+    left: 65%;
+    height: 80px;
+    line-height: 80px;  
+    width: 80px;  
+    font-size: 2em;
+    font-weight: bold;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 2.5px 1px 6.5px black;
+    background-color: #001eff;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+#btnCadPassageiro:hover{
+    background-color: #ffffff;
+    color: #001eff;
+}
+
+#spanNovopass{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: #ffffff;
+    padding: 10px;
+    padding-right: 40px;
+    height: 40px;
+    border-radius: 100px;
+    width: 40%;
+    background-color: #001eff;
+    box-shadow: 2px 2px 6.5px black;
+
+}
  /* cores do placeholder */
 
 ::-webkit-input-placeholder {
@@ -147,4 +203,19 @@ main{
   /* Firefox 18- */
   :-moz-placeholder {
     color:#03379f;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.model{
+    display: none;
   }

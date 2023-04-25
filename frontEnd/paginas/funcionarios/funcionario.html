@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./funcionario.css">
     <title>Blue Horizon (Work)</title>
 </head>
-<body>
+<body onload="onLoad()">
     <header>
         <div><img id="logo" src="../../../assets/voo-de-aviao.png" alt="Logo Blue Horizon"></div>
         <div class="logo">
@@ -17,31 +17,31 @@
         </div>
         <div class="options"> 
             <div class="inpBusca">
-                <input type="text" placeholder="Busque aqui...">
+                <input class="buscarInp" type="text" placeholder="Busque aqui...">
             <i class='bx bx-search'></i>  
             </div>
                      
             <div class="logoutSpan">
                 <span class="spanLogout">Seja bem-vindo <span id="nomeFunc">Antônio de Lima Reis</span></span>
-                <a class="aHead" href="../login/login.html">Logout</a><i class="far fa-togoout icon-modify"></i></div>
+                <a title="Sair" class="aHead" href="../login/login.html">Logout</a><i class="far fa-togoout icon-modify"></i></div>
             </div>
     </header>
-    <main>
+    <main>  
+        <div id="passageiroNovo"><span id="spanNovopass">Cadastrar</span><button id="btnCadPassageiro" title="Cadastrar passageiro">+</button></div>
+            <!-- <div class="textDispo"> <img id="dispo" src="../../../assets/mundo.png" alt=""><h1>Voos disponiveis: </h1></div> -->
         <div class="divCards">
-            <div class="cardPrin">
-                <div class="cardVoo">
-                    <span>Cidade: Alabasta</span>
-                    <span>Valor: R$ 1200</span>
-                    <span>Data: 24/04/2023 09:55</span>
-                </div>
-                <div class="cardVoo">
-                    <span>Cidade: Alabasta</span>
-                    <span>Valor: R$ 1200</span>
-                    <span>Data: 24/04/2023 09:55</span>
+            <div class="cardPrin model">
+                <div class="cardVoo ">
+                    <span id="spanCodVeiculo">Veículo: Alabasta</span>
+                    <span id="spanDestino">Destino: Alabasta</span>
+                    <span id="spanValor">Valor: R$ 1200</span>
+                    <span id="spanDataHora">Data: 24/04/2023 09:55</span>
+                    <span id="spanDescricao">Descrição: 24/04/2023 09:55</span>
                 </div>
             </div>
         </div>
     
     </main>
 </body>
+<script src="./funcionario.js"></script>
 </html>
