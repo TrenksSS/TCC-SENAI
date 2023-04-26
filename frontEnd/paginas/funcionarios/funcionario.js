@@ -95,3 +95,8 @@ search_btn.addEventListener('keyup', () => {
     }
 
 })
+
+
+function removeModelCad(){
+    document.querySelector('.opa').classList.remove('model')
+}

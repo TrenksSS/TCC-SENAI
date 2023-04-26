@@ -27,20 +27,51 @@
             </div>
     </header>
     <main>  
-        <div id="passageiroNovo"><span id="spanNovopass">Cadastrar</span><button id="btnCadPassageiro" title="Cadastrar passageiro">+</button></div>
+        <div id="passageiroNovo"><span id="spanNovopass">Cadastrar</span><button onclick="removeModelCad()" id="btnCadPassageiro" title="Cadastrar passageiro">+</button></div>
             <!-- <div class="textDispo"> <img id="dispo" src="../../../assets/mundo.png" alt=""><h1>Voos disponiveis: </h1></div> -->
         <div class="divCards">
             <div class="cardPrin model">
                 <div class="cardVoo ">
-                    <span id="spanCodVeiculo">Veículo: Alabasta</span>
-                    <span id="spanDestino">Destino: Alabasta</span>
-                    <span id="spanValor">Valor: R$ 1200</span>
-                    <span id="spanDataHora">Data: 24/04/2023 09:55</span>
-                    <span id="spanDescricao">Descrição: 24/04/2023 09:55</span>
+                    <span>Veículo: <span id="spanCodVeiculo"> </span></span>
+                    <span>Destino: <span id="spanDestino"> </span></span>
+                    <span>Valor: <span id="spanValor"> </span></span>
+                    <span>Data: <span id="spanDataHora"> </span></span>
+                    <span>Descrição:  <span id="spanDescricao"> </span></span>
                 </div>
             </div>
         </div>
-    
+        <div class="opa model">
+            <div class="contentForm">
+                <form action="">
+                    <div class="contentH1"><h1>Cadastro de Passageiro...</h1><img id="passageiroImg" src="../login/assets/icons8-passageiros-com-bagagem-64.png" alt="imagem de passageiro"></div>
+                    <div class="contentLabels">
+                        <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome"><br>
+                  
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf"><br>
+                  
+                    <label for="passaporte">Passaporte:</label>
+                    <input type="text" id="passaporte" name="passaporte"><br>
+                  
+                    <label for="data_nascimento">Data de Nascimento:</label>
+                    <input type="date" id="data_nascimento" name="data_nascimento"><br>
+                  
+                    <label for="nacionalidade">Nacionalidade:</label>
+                    <input type="text" id="nacionalidade" name="nacionalidade"><br>
+
+                    <label for="nacionalidade">Nacionalidade:</label>
+                    <input type="text" id="nacionalidade" name="nacionalidade"><br>
+                    
+                    <label for="nacionalidade">Nacionalidade:</label>
+                    <input type="text" id="nacionalidade" name="nacionalidade"><br>
+                  
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        
     </main>
 </body>
 <script src="./funcionario.js"></script>
