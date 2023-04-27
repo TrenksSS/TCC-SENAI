@@ -98,5 +98,10 @@ search_btn.addEventListener('keyup', () => {
 
 
 function removeModelCad(){
-    document.querySelector('.opa').classList.remove('model')
+    document.querySelector('.opa').classList.toggle('model')
+    console.log('oi')
+}
+
+function cadastro(){
+    alert('oi')
 }

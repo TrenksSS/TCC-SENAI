@@ -196,23 +196,15 @@ main{
 
 }
 
-.contentLabels{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
-    width: 800px;
 
-}
 
-.contentLabels > input{
-    width: 90%;
-}
+
 
 label{
     color:#03379f;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bold;
+
 
 }
 
@@ -259,20 +251,28 @@ label{
     height: 100%;
 }
 
-form{
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #ffffff;
-    width: 40%;
+    width: 54%;
     border-radius: 15px;
     height: 90%;
+    padding-left: 34px;
     padding-right: 3%;
 }
 
-form > .contentH1 > h1{
+.form > .contentH1 > h1{
+   
     color: #8880FE;
     font-size: 3rem;
     margin-bottom: 3rem;
     text-align: center;
 }
+
 
 .contentH1{
     margin-top: 5%;
@@ -290,10 +290,84 @@ form > .contentH1 > h1{
     height: 89%;
 }
 
+.conteinerLab{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1300px;
+    padding-right:50px;
+    gap: 25px;
+    margin-left: 2%;
+    height: 60%;
+}
+
+.contentL > input{
+    width: 60%;
+    padding-left: 2%;
+    font-size: 20px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    background-color: #03379f;
+    color: #ffffff;
+}
+
+.contentL2 > input{
+    width: 60%;
+    padding-left: 2%;
+    height: 50px;
+    border-radius: 15px;
+    font-size: 20px;
+    border: none;
+    background-color: #03379f;
+    color: #ffffff;
+}
+
+
+
+
+.contentL, .contentL2{
+    display: flex;
+    margin-left: 10%;
+    width: 30%;
+    flex-direction: column;
+}
+
+.contentL2{
+    height: 500px;
+}
+
+.butoes{
+    margin-top: -3.5%;
+    display: flex;
+    width: 76%;
+    justify-content: space-between;
+}
+
+#btnCadPas{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    margin-right: 80px;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #8880FE;
+    padding:5px;
+    padding-right: 25px;
+    padding-left: 20px;
+    border-radius: 50px;
+    border: 5px solid #8880FE;
+}
+
+#btnVoltar{
+    background-color: transparent;
+    border: none;
+}
+
 #passageiroImg{
     position: absolute;
-    left:64.5%;
-    top: 9.5%;
+    left:62.9%;
+    top: 10.5%;
     width: 64px;
     height: 64px;
 }

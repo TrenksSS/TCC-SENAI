@@ -1,25 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,500;1,600&display=swap');
 
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: 0;
+    font-family: 'Poppins';
 }
+
 
 body{
     display: flex;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.bodyReal{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(242, 246, 250);
+    background-color: #1a5b6138;
+    width: 100%;
+    height: 100vh;
 }
-
 
 .p{
     display: flex;
     flex-direction: wrap;
     width: 1750px;
-    margin-top: 6.8%;
     align-items: center;
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
@@ -39,7 +46,7 @@ body{
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     background-color: rgb(211, 236, 253);
-    box-shadow: rgba(78, 76, 76, 0.4) 0px 2px 4px 0px; 
+    box-shadow: rgba(176, 175, 175, 0.4) 0px 2px 4px 3px; 
 }
 
 #spanAlert{
@@ -82,11 +89,15 @@ body{
     border: none;
     border-bottom: solid 3px #5589F3;
     padding: 2%;
+    padding-left: 5%;
     width: 420px;
+    background-color: #03379f6f;
     font-size: 20px;
-    color: black;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+
+    color: rgb(255, 255, 255);
     font-weight: bold;
-    background-color: transparent;
 }
 
 ::-webkit-input-placeholder {
@@ -107,7 +118,7 @@ body{
 .inp:hover{
     transition: 0.3s;
     cursor: pointer;
-    padding-left:  5.5%;
+    padding-left:  6.5%;
 }
 
 #login{
@@ -142,7 +153,8 @@ body{
     z-index: 1;
     height: 100%;
     width: 100%;
-    border-radius: 15px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .carousel {
@@ -162,14 +174,17 @@ body{
     color: white;
 }
 .imginput{
-    margin-bottom: 2%;
-    width: 50px;
+    position: absolute;
+    left: 8%;
+    margin-top: 0%;
+    width: 60px;
+
 }
 
 .text2{
     font-weight: bold;
     font-size: 70px;
-    color: rgb(255, 255, 255)    ;
+    color: rgb(255, 255, 255);
 }
 
 .textao{
@@ -182,7 +197,7 @@ body{
     background-image: url(./assets/10966.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: rgba(78, 76, 76, 0.4) 0px 2px 4px 0px; 
+    box-shadow: rgba(176, 175, 175, 0.4) 0px 2px 4px 3px; 
 }
 
 .divtext{
