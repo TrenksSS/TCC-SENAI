@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../login/assets/icons8-login-arredondado-à-direita-64.png" type="image/x-icon">
+    <link rel="stylesheet" href="loginFunc.css">
+    <title>Login Funcionário</title>
+</head>
+<body>
+
+    <main>
+        <div class="imgText">
+            <span>Identifique-se</span>
+            <span>para utilizar o sistema.</span>
+            <img id="imgGif" src="../../login/assets/background.gif" alt="">
+        </div>
+        <div class="formLogin">
+            <span id="spanDados">Preencha os Dados </span>
+            <div class="input">
+                <img class="imginput" src="../../login/assets/icons8-nova-mensagem-64.png" alt="">
+                <input required class="inp" id="email" type="email" placeholder=" Email">
+            </div>
+            <div class="input">
+                <img class="imginput" src="../../login/assets/icons8-senha2-64.png" alt="">
+                <input required class="inp" id="psw" type="password" placeholder="Senha">
+            </div>
+            <span id="spanAlert" class="model">Oi</span>
+
+            <button title="Realizar login" onclick="login()" id="login">LOGIN</button>
+        </div>
+       
+    </main>
+
+</body>
+<script src="./loginFunc.js"></script>
+</html>

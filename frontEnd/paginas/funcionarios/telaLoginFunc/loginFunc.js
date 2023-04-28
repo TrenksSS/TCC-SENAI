@@ -1,4 +1,4 @@
-const uriLogin = "http://localhost:2550/passageiros/login"
+const uriLogin = "http://localhost:2550/funcionarios/login"
 const email = document.querySelector("#email")
 const psw = document.querySelector("#psw")
 const alertSpan = document.querySelector("#spanAlert")
@@ -27,7 +27,7 @@ const login = (err) => {
                 alertSpan.classList.remove('model')
                 alertSpan.innerHTML = info.erro
                 setTimeout(() => {alertSpan.classList.add('model')}, 750);
-            } else if(info.erro == "Passageiro não encontrado"){
+            } else if(info.erro == "Funcionário não encontrado"){
                 alertSpan.classList.remove('model')
                 alertSpan.innerHTML = info.erro
                 setTimeout(() => {alertSpan.classList.add('model')}, 750);
@@ -35,7 +35,7 @@ const login = (err) => {
                 localStorage.clear();
                 localStorage.setItem('usuario',JSON.stringify({"role":info.role, "nome":info.uname}));
                 console.log(localStorage)
-                window.location.href = "../home/home.html"
+                window.location.href = "../funcionario.html"
             }
         } else {
             alert(' ❌ Erro no Login:' + info);

@@ -30,15 +30,6 @@
         <div id="passageiroNovo"><span id="spanNovopass">Cadastrar</span><button onclick="removeModelCad()" id="btnCadPassageiro" title="Cadastrar passageiro">+</button></div>
             <!-- <div class="textDispo"> <img id="dispo" src="../../../assets/mundo.png" alt=""><h1>Voos disponiveis: </h1></div> -->
         <div class="divCards">
-            <div class="cardPrin model">
-                <div class="cardVoo ">
-                    <span>Veículo: <span id="spanCodVeiculo"> </span></span>
-                    <span>Destino: <span id="spanDestino"> </span></span>
-                    <span>Valor: <span id="spanValor"> </span></span>
-                    <span>Data: <span id="spanDataHora"> </span></span>
-                    <span>Descrição:  <span id="spanDescricao"> </span></span>
-                </div>
-            </div>
         </div>
         <div class="opa model">
             <div class="contentForm">
@@ -48,25 +39,25 @@
                     <div class="conteinerLab">
                         <div class="contentL">
                             <label >Nome:</label>
-                            <input type="text" id="nacionalidade" ><br>
+                            <input type="text" id="nomePass" ><br>
                             <label >Passaporte:</label>
-                            <input type="text" id="passaporte"><br>
+                            <input type="text" id="passaporteCad"><br>
                             <label >Email:</label>
-                            <input type="text" id="nacionalidade" ><br>
+                            <input type="text" id="emailCad" ><br>
                         </div>
                             <div class="contentL2">
                                 <label >CPF:</label>
-                                <input type="text" id="nacionalidade" ><br>
+                                <input type="text" id="cpfCad" ><br>
                                 <label >Nascimento:</label>
-                                <input type="text" id="passaporte"><br>
+                                <input type="date" id="nascimento"><br>
                                 <label >Senha:</label>
-                                <input type="text" id="nacionalidade" ><br>
+                                <input type="text" id="senhaCad" ><br>
                                 <label >Nacionalidade:</label>
-                                <input type="text" id="passaporte"><br>
+                                <input type="text"  id="nacionalidadeCad"><br>
                             </div>
                             <div class="butoes">
-                                <button id="btnVoltar" onclick="removeModelCad()"><img src="../login/assets/icons8-voltar-64.png" alt="Voltar"></button>
-                                <button onclick="cadastro()" id="btnCadPas">Cadastrar<img src="../login/assets/icons8-adicionar-usuário-masculino-80.png" alt="Cadastrar"></button>
+                                <button id="btnVoltar" title="Voltar" onclick="removeModelCad()"><img id="imgVoltar" src="../login/assets/icons8-voltar-64.png" alt="Voltar"></button>
+                                <button onclick="cadastro()" title="cadastrar" id="btnCadPas">Cadastrar<img src="../login/assets/icons8-adicionar-usuário-masculino-80.png" alt="Cadastrar"></button>
                             </div>
                         </div>  
                     </div>

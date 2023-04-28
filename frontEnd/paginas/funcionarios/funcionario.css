@@ -302,20 +302,24 @@ label{
 }
 
 .contentL > input{
-    width: 60%;
+    width: 80%;
     padding-left: 2%;
     font-size: 20px;
     height: 50px;
+    padding-right: 10px;
     border-radius: 15px;
     border: none;
+    font-weight: bold;
     background-color: #03379f;
     color: #ffffff;
 }
 
 .contentL2 > input{
-    width: 60%;
+    width: 80%;
+    padding-right: 10px;
     padding-left: 2%;
     height: 50px;
+    font-weight: bold;
     border-radius: 15px;
     font-size: 20px;
     border: none;
@@ -341,12 +345,13 @@ label{
     margin-top: -3.5%;
     display: flex;
     width: 76%;
-    justify-content: space-between;
 }
 
 #btnCadPas{
     display: flex;
+    left:57%;
     align-items: center;
+    position: fixed;
     font-size: 30px;
     margin-right: 80px;
     color: #ffffff;
@@ -359,9 +364,35 @@ label{
     border: 5px solid #8880FE;
 }
 
+#btnCadPas:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #8880FE;
+
+}
+
 #btnVoltar{
+    position: fixed;
+    margin-top: 0.8%;
+    /* left: 31.5%; */
+    left: 27.4%;
     background-color: transparent;
     border: none;
+}
+
+#btnVoltar:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #8880FE;
+    border-radius: 50%;
+    height: 60px;
+    line-height: 60px;  
+    width: 60px;
+    background-color: #8880FE;
+    border: 2px solid #8880FE ;
+}
+
+#imgVoltar{
+    width: 100%;
+    height: 100%;
 }
 
 #passageiroImg{
@@ -370,4 +401,15 @@ label{
     top: 10.5%;
     width: 64px;
     height: 64px;
+}
+
+#nascimento{
+    background-color: white;
+    color: #03379f;
+    font-weight: bold;
+    border:3px solid #03379f;
+}
+
+#nascimento:hover{
+    cursor: pointer;
 }
