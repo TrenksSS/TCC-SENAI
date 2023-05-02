@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/veiculos")
+fetch("http://localhost:2550/passagens")
     .then((res) => {
         return res.json();
     })
