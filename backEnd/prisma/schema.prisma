@@ -14,6 +14,7 @@ model Funcionario {
   senha String
   cargo String
   nivel String
+  imagem String?
   status String
 }
 
@@ -54,6 +55,9 @@ model Voo {
   hora        DateTime     @default(now())
   destino     String
   descricao   String
+  empresa     String
+  valor_Min   Float
+  valor_Max   Float
   piloto      Piloto       @relation(fields: [id_piloto], references: [id])
   veiculo     Veiculo      @relation(fields: [id_veiculo], references: [id])
   tripulacoes Tripulacao[]
@@ -70,6 +74,7 @@ model Passageiro {
   role String @default("Passageiro")
   email String?
   senha String?
+  imagem String?
   passagens Passagem[]
   contatos Contato []
 }
