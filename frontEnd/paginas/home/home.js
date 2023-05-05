@@ -16,3 +16,13 @@ fetch("http://localhost:2550/passagens")
             list.appendChild(novoItem);
         });
     });
+
+    function am() {
+        let card = document.querySelector("#ham")
+        if(card.style.display = "none") {
+    card.style = "display:flex"
+        }
+    else{
+        card.style = "display:none"
+    }
+    }
