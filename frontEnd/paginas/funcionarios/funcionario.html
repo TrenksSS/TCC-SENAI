@@ -23,8 +23,22 @@
                      
             <div class="logoutSpan">
                 <span class="spanLogout">Seja bem-vindo <span id="nomeFunc">Antônio de Lima Reis</span></span>
-                <img src="" alt="" >
-                <a title="Sair" class="aHead" href="../login/login.html">Logout</a><i class="far fa-togoout icon-modify"></i></div>
+                <div>
+                    <img id="imgFunc" src="" alt="" >
+                    
+                    <!-- Botão de abertura do modal -->
+                    <button id="abrir-modal">Ver perfil</button>
+
+<!-- Modal -->
+                    <div id="modal">
+                        <img src="imagem-de-perfil.jpg" alt="Imagem de perfil">
+                        <h2>Nome do usuário</h2>
+                        <p>Informações de perfil</p>
+                        <button id="fechar-modal">Fechar</button>
+                    </div>
+                </div>
+
+                <!-- <a title="Sair" class="aHead" href="./telaLoginFunc/loginFunc.html">Logout</a><i class="far fa-togoout icon-modify"></i></div> -->
             </div>
     </header>
     <main>  
@@ -37,28 +51,35 @@
                 <div class="form">
                     <!-- <img id="passageiroImg" src="../login/assets/icons8-passageiros-com-bagagem-64.png" alt="imagem de passageiro"> -->
                     <div class="contentH1"><h1>Cadastro de Passageiro</h1></div>
-                    <div class="conteinerLab">
+                    <div class="conteinerLab" id="myForm">
                         <div class="contentL">
-                            <label >Nome:</label>
-                            <input type="text" id="nomePass" ><br>
-                            <label >Passaporte:</label>
-                            <input type="text" id="passaporteCad"><br>
-                            <label >Email:</label>
-                            <input type="text" id="emailCad" ><br>
+                            <label for="nome">Nome:</label>
+                            <input type="text" name="nome" required>
+
+                            <label for="passaporte">Passaporte:</label>
+                            <input type="text" name="passaporte">
+
+                            <label for="email">E-mail:</label>
+                            <input type="email" name="email" required>
+
+                            <label for="imagem">Imagem:</label>
+                            <input type="file" name="imagem" accept="image/*" id="file-upload" required>
+                            <label for="file-upload"  id="upload-label">Escolher arquivo</label>
+
                         </div>
                             <div class="contentL2">
-                                <label >CPF:</label>
-                                <input type="text" id="cpfCad" ><br>
-                                <label >Nascimento:</label>
-                                <input type="date" id="nascimento"><br>
-                                <label >Senha:</label>
-                                <input type="text" id="senhaCad" ><br>
-                                <label >Nacionalidade:</label>
-                                <input type="text"  id="nacionalidadeCad"><br>
+                                <label for="cpf">CPF:</label>
+                                <input type="text" name="cpf" required>
+                                <label for="data_nascimento">Data de nascimento:</label>
+                                <input type="date" name="data_nascimento" id="nascimento" required>
+                                <label for="senha">Senha:</label>
+                                <input type="password" name="senha" required>
+                                <label for="nacionalidade">Nacionalidade:</label>
+                                <input type="text" name="nacionalidade" required>
                             </div>
                             <div class="butoes">
                                 <button id="btnVoltar" title="Voltar" onclick="removeModelCad()"><img id="imgVoltar" src="../login/assets/icons8-voltar-64.png" alt="Voltar"></button>
-                                <button onclick="cadastro()" title="cadastrar" id="btnCadPas">Cadastrar<img src="../login/assets/icons8-adicionar-usuário-masculino-80.png" alt="Cadastrar"></button>
+                                <button type="submit"  title="cadastrar" id="btnCadPas">Cadastrar<img src="../login/assets/icons8-adicionar-usuário-masculino-80.png" alt="Cadastrar"></button>
                             </div>
                         </div>  
                     </div>

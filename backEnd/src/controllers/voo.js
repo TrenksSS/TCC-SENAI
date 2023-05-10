@@ -5,6 +5,9 @@ const prisma = new PrismaClient();
 const create = async (req, res) => {
     req.body.id_piloto = Number(req.body.id_piloto)
     req.body.id_veiculo = Number(req.body.id_veiculo)
+    req.body.valor_Max = Number(req.body.valor_Max)
+    req.body.valor_Min = Number(req.body.valor_Min)
+
 
     let voo = await prisma.voo.create({
         data: req.body
@@ -25,6 +28,9 @@ const readOne = async (req, res) => {
             data_saida:true,
             destino:true,
             hora:true,
+            empresa:true,
+            valor_Max:true,
+            valor_Min:true,
             descricao:true,
             passagens:true,
             tripulacoes:true
@@ -44,6 +50,9 @@ const read = async (req, res) => {
             data_saida:true,
             destino:true,
             hora:true,
+            empresa:true,
+            valor_Max:true,
+            valor_Min:true,
             descricao:true,
             passagens:true,
             tripulacoes:true

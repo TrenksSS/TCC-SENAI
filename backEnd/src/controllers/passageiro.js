@@ -9,7 +9,7 @@ const prisma = new PrismaClient();
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, './uploads/');
+    cb(null, '../uploads/');
   },
   filename: function (req, file, cb) {
     var datetimestamp = Date.now();
@@ -38,7 +38,6 @@ const createCrypt = async (req, res) => {
           bcrypt.hash(req.body.senha, salt, async function (errCrypto, hash) {
             if (errCrypto == null) {
               req.body.senha = hash;
-
               const passageiro = await prisma.passageiro.create({
                 data: {
                   nome: req.body.nome,
