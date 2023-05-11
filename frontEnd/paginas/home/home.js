@@ -26,3 +26,13 @@ fetch("http://localhost:2550/passagens")
         card.style = "display:none"
     }
     }
+
+    function cr() {
+        let card = document.querySelector("#cardr")
+        card.style = "display:none"
+    }
+
+    function ca() {
+        let card = document.querySelector("#cardr")
+        card.style = "display:flex"
+    }
