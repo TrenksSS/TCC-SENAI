@@ -40,6 +40,7 @@ main{
 .spanLogout{
     color: #03379f;
     font-weight: bold;
+    width: 90%;
     font-size: 20px;
 }
 
@@ -94,11 +95,11 @@ main{
 
 .logoutSpan{
     display: flex;
-    gap: 12%;
+    gap:5px;
+    margin-left: 2%;
     align-items: center;
     text-align: center;
-    justify-content: center;
-    width: 90%;
+    width: 100%;
 }
 
 .divCards{
@@ -414,3 +415,61 @@ label{
 #nascimento:hover{
     cursor: pointer;
 }
+
+#imgFunc{
+    width: 50px;
+}
+
+/* Estilo do modal */
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  /* Estilo da animação de descer */
+  #modal.aberto {
+    display: flex;
+    animation: descer 0.5s;
+  }
+  
+  @keyframes descer {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  #file-upload {
+    display: none;
+  }
+  
+  #upload-label {
+    display: flex;
+    padding: 5px 10px;
+    font-size: 26px;
+    width: 79%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    background-color: #03379f;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #upload-label:hover {
+    background-color: rgb(5, 21, 39);
+  }
+

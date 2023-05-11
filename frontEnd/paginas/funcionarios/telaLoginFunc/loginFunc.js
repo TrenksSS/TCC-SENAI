@@ -33,7 +33,7 @@ const login = (err) => {
                 setTimeout(() => {alertSpan.classList.add('model')}, 750);
             }else if(info.validation == true){
                 localStorage.clear();
-                localStorage.setItem('usuario',JSON.stringify({"role":info.role, "nome":info.uname}));
+                localStorage.setItem('funcionario',JSON.stringify({"id": info.uid,"role":info.nivel, "nome":info.uname, "fotoPerfil":info.ufoto}));
                 console.log(localStorage)
                 window.location.href = "../funcionario.html"
             }

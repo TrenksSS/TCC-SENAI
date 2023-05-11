@@ -3,13 +3,22 @@ const listaVoo = document.querySelector(".divCards");
 let voo = [];
 let veiculo = [];
 
+var funcinfo = JSON.parse(localStorage.getItem("funcionario"))
+const nomeFunc = document.querySelector("#nomeFunc")
+const fotoFunc = document.querySelector("#imgFunc")
+
+
 
 function onLoad() {
     loadVoo()
+    fotoFunc.src = "../../../backEnd/uploads/" + funcinfo.fotoPerfil
+    nomeFunc.innerHTML = funcinfo.nome
+
 }
 
 
 function loadVoo() {
+
     const options = { method: 'GET' }
 
     fetch("http://localhost:2550/voos", options)
@@ -129,43 +138,55 @@ search_btn.addEventListener('keyup', () => {
 })
 
 
+
 function removeModelCad(){
     document.querySelector('.opa').classList.toggle('model')
 }
 
-function cadastro(){
+function cadastroP(){
+    console.log("oi")
+
+    const myForm = document.getElementById('myForm');
+
+    myForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+    
+      const formData = new FormData(myForm);
+    
+      fetch('/createCrypt', {
+        method: 'POST',
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    });
+}
 
 
-        
-        let body = {
-            "nome": document.querySelector("#nomePass").value,
-            "cpf": document.querySelector("#cpfCad").value,
-            "passaporte": document.querySelector("#passaporteCad").value,
-            "data_nascimento": document.querySelector("#nascimento").value,
-            "nacionalidade": document.querySelector("#nacionalidadeCad").value,
-            "email": document.querySelector("#emailCad").value,
-            "senha": document.querySelector("#senhaCad").value
-        }
-        const options = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-        };
-        options.body = JSON.stringify(body)
-        console.log(body)
-        if (body.nome.length > 0 && body.cpf.length > 0 && body.passaporte.length > 0 && body.data_nascimento.length > 0 &&
-            body.nacionalidade.length > 0 && body.email.length > 0 && body.senha.length > 0 ) {
-            fetch("http://localhost:2550/passageiros/crypt", options)
-                .then(resp => resp.status)
-                .then(data => {
-                    if (data == 200) {
-                        alert("Cadastrado com SUCESSO! 😀✔ ")
-                        window.location.reload()
-                    } else {
-                        alert("Erro ao enviar Pedido 🙁❌")
-                    }
-                })
-                .catch(err => alert("❌ Erro ao enviar dados. Erro:" + err));
-        } else {
-            alert("Preencha todos os campos ❗")
-        }
-    }
+// Seleciona os elementos do DOM
+const botaoAbrir = document.getElementById('abrir-modal');
+const botaoFechar = document.getElementById('fechar-modal');
+const modal = document.getElementById('modal');
+
+// Adiciona um evento de clique ao botão de abertura do modal
+botaoAbrir.addEventListener('click', () => {
+  modal.classList.add('aberto');
+});
+
+// Adiciona um evento de clique ao botão de fechamento do modal
+botaoFechar.addEventListener('click', () => {
+  modal.classList.remove('aberto');
+});
+
+    
+var fileUpload = document.getElementById('file-upload');
+var uploadLabel = document.getElementById('upload-label');
+
+fileUpload.addEventListener('change', function() {
+  uploadLabel.innerHTML = this.files[0].name;
+});
