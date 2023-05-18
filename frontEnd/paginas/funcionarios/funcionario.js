@@ -11,7 +11,7 @@ const fotoFunc = document.querySelector("#imgFunc")
 
 function onLoad() {
     loadVoo()
-    fotoFunc.src = "../../../backEnd/uploads/" + funcinfo.fotoPerfil
+    fotoFunc.src = "../../../uploads/" + funcinfo.fotoPerfil
     nomeFunc.innerHTML = funcinfo.nome
 
 }
@@ -144,16 +144,14 @@ function removeModelCad(){
 }
 
 function cadastroP(){
-    console.log("oi")
 
-    const myForm = document.getElementById('myForm');
-
+    const myForm = document.getElementById('myForm')
     myForm.addEventListener('submit', function (event) {
       event.preventDefault();
-    
+      console.log("oi")
       const formData = new FormData(myForm);
     
-      fetch('/createCrypt', {
+      fetch('http://localhost:2550/passageiros/crypt', {
         method: 'POST',
         body: formData,
       })
@@ -171,16 +169,20 @@ function cadastroP(){
 // Seleciona os elementos do DOM
 const botaoAbrir = document.getElementById('abrir-modal');
 const botaoFechar = document.getElementById('fechar-modal');
-const modal = document.getElementById('modal');
+const modal = document.querySelector('.modal');
 
-// Adiciona um evento de clique ao botão de abertura do modal
 botaoAbrir.addEventListener('click', () => {
+  botaoAbrir.classList.add('model')
+  botaoFechar.classList.remove('model')
   modal.classList.add('aberto');
 });
 
 // Adiciona um evento de clique ao botão de fechamento do modal
 botaoFechar.addEventListener('click', () => {
   modal.classList.remove('aberto');
+  botaoAbrir.classList.remove('model')
+  botaoFechar.classList.add('model')
+  
 });
 
     
