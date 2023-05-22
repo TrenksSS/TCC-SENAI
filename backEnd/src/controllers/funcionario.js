@@ -79,7 +79,7 @@ const login = async(req, res) => {
           jwt.sign(data, process.env.KEY, {expiresIn: '1  h'}, function(err2, token) {
             if(err2 == null){
   
-                res.status(200).json({"token": token, "uid": funcionario.id, "uname": funcionario.nome, "nivel": funcionario.nivel, "ufoto": funcionario.imagem, "ucargo": funcionario.cargo,"validation": true}).end()
+                res.status(200).json({"token": token, "uid": funcionario.id, "uname": funcionario.nome, "nivel": funcionario.nivel, "ufoto": funcionario.imagem, "ucargo": funcionario.cargo, "ustatus": funcionario.status, "validation": true}).end()
             } else {
                 res.status(500).json(err2).end()
             }

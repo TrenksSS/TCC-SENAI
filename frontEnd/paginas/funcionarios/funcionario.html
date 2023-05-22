@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,84 +10,104 @@
     <link rel="stylesheet" href="./funcionario.css">
     <title>Blue Horizon (Work)</title>
 </head>
+
 <body onload="onLoad()">
     <header>
         <div><img id="logo" src="../../../assets/voo-de-aviao.png" alt="Logo Blue Horizon"></div>
         <div class="logo">
             <span class="spanEmpresa"> Blue Horizon </span>
         </div>
-        <div class="options"> 
+        <div class="options">
             <div class="inpBusca">
                 <input class="buscarInp" type="text" placeholder="Busque aqui...">
-            <i class='bx bx-search'></i>  
+                <i class='bx bx-search'></i>
             </div>
-                     
+
             <div class="logoutSpan">
-                <span class="spanLogout">Seja bem-vindo(a)</span>
+                <span class="spanLogout">Seja bem-vindo(a) </span>
                 <div class="tagPerfilFunc">
-                    <img id="imgFunc" src="" alt="" >
+                    <div class="circle">
+                    </div>
+                    <img id="imgFunc" src="" alt="">
                     <!-- Botão de abertura do modal -->
-                    <button id="abrir-modal"><img src="../login/assets/icons8-divisa-circulada-à-abaixo-64.png" alt="Abrir modal perfil" title="Perfil" id="setaBtn"></button>
-                    <button id="fechar-modal" class="model"><img src="../login/assets/icons8-divisa-circulada-acima-64.png" alt="Fechar modal perfil" title="Fechar" id="setaBtn"></button>
+                    <button id="abrir-modal"><img src="../login/assets/icons8-divisa-circulada-à-abaixo-64.png"
+                            alt="Abrir modal perfil" title="Perfil" id="setaBtn"></button>
+                    <button id="fechar-modal" class="model"><img
+                            src="../login/assets/icons8-divisa-circulada-acima-64.png" alt="Fechar modal perfil"
+                            title="Fechar" id="setaBtn"></button>
                 </div>
             </div>
-            
+
     </header>
-    <main>  
+    <main>
         <div class="modal">
             <div class="modalPerfil">
-                <span id="nomeFunc">Antônio de Lima Reis</span>
-                <a title="Sair" class="aHead" href="./telaLoginFunc/loginFunc.html">Logout</a><i class="far fa-togoout icon-modify"></i>
+                <div class="infosFunc">
+                    <span id="nomeFunc">Antônio de Lima Reis</span>
+                    <span id="cargoFunc">Antônio de Lima Reis</span>
+                    <span title="Nível de Acesso">Nível: <span id="nivelFunc"> 55</span></span>
+                    <span id="statusFunc">Antônio de Lima Reis</span>
+                </div>
+
+                <a title="Sair" onclick="localStorage.clear()" class="aHead"
+                    href="./telaLoginFunc/loginFunc.html">Logout</a><i class="far fa-togoout icon-modify"></i>
             </div>
         </div>
-       
-        <div id="passageiroNovo"><span id="spanNovopass">Cadastrar</span><button onclick="removeModelCad()" id="btnCadPassageiro" title="Cadastrar passageiro">+</button></div>
-            <!-- <div class="textDispo"> <img id="dispo" src="../../../assets/mundo.png" alt=""><h1>Voos disponiveis: </h1></div> -->
+
+        <div id="passageiroNovo"><span id="spanNovopass">Cadastrar</span><button onclick="removeModelCad()"
+                id="btnCadPassageiro" title="Cadastrar passageiro">+</button></div>
+        <!-- <div class="textDispo"> <img id="dispo" src="../../../assets/mundo.png" alt=""><h1>Voos disponiveis: </h1></div> -->
         <div class="divCards">
         </div>
-        <div class="opa model">
-            <div class="contentForm">
-                <div class="form">
-                    <!-- <img id="passageiroImg" src="../login/assets/icons8-passageiros-com-bagagem-64.png" alt="imagem de passageiro"> -->
-                    <div class="contentH1"><h1>Cadastro de Passageiro</h1></div>
-                    <form class="conteinerLab" id="myForm">
-                        <div class="contentL">
-                            <label for="nome">Nome:</label>
-                            <input type="text" name="nome" required>
-
-                            <label for="passaporte">Passaporte:</label>
-                            <input type="text" name="passaporte">
-
-                            <label for="email">E-mail:</label>
-                            <input type="email" name="email" required>
-
-                            <label for="imagem">Imagem:</label>
-                            <input type="file" name="imagem" accept="image/*" id="file-upload" required>
-                            <!-- <img src="../login/assets/icons8-imagem-100.png" alt=""> -->
-                            <label for="file-upload"  id="upload-label">Escolher arquivo</label>
-
-                        </div>
-                            <div class="contentL2">
-                                <label for="cpf">CPF:</label>
-                                <input type="text" name="cpf" required>
-                                <label for="data_nascimento">Data de nascimento:</label>
-                                <input type="date" name="data_nascimento" id="nascimento" required>
-                                <label for="senha">Senha:</label>
-                                <input type="password" name="senha" required>
-                                <label for="nacionalidade">Nacionalidade:</label>
-                                <input type="text" name="nacionalidade" required>
-                            </div>
-                            <div class="butoes">
-                                <button id="btnVoltar" title="Voltar" onclick="removeModelCad()"><img id="imgVoltar" src="../login/assets/icons8-voltar-64.png" alt="Voltar"></button>
-                                <button type="submit"  title="cadastrar" onclick="cadastroP()" id="btnCadPas">Cadastrar<img src="../login/assets/icons8-adicionar-usuário-masculino-80.png" alt="Cadastrar"></button>
-                            </div>
-                        </form>  
-                    </div>
+    </main>
+    <div class="opa model">
+        <div class="contentForm">
+            <div class="form">
+                <!-- <img id="passageiroImg" src="../login/assets/icons8-passageiros-com-bagagem-64.png" alt="imagem de passageiro"> -->
+                <div class="contentH1">
+                    <h1>Cadastro de Passageiro</h1>
                 </div>
+                <form class="conteinerLab" id="myForm">
+                    <div class="contentL">
+                        <label for="nome">Nome:</label>
+                        <input type="text" name="nome" required>
+
+                        <label for="passaporte">Passaporte:</label>
+                        <input type="text" name="passaporte">
+
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="email" required>
+
+                        <label for="imagem">Imagem:</label>
+                        <input type="file" name="imagem" accept="image/*" id="file-upload" required>
+                        <!-- <img src="../login/assets/icons8-imagem-100.png" alt=""> -->
+                        <label for="file-upload" id="upload-label">Escolher arquivo</label>
+
+                    </div>
+                    <div class="contentL2">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" name="cpf" required>
+                        <label for="data_nascimento">Data de nascimento:</label>
+                        <input type="date" name="data_nascimento" id="nascimento" required>
+                        <label for="senha">Senha:</label>
+                        <input type="password" name="senha" required>
+                        <label for="nacionalidade">Nacionalidade:</label>
+                        <input type="text" name="nacionalidade" required>
+                    </div>
+                    <div class="butoes">
+                        <button id="btnVoltar" title="Voltar" onclick="removeModelCad()"><img id="imgVoltar"
+                                src="../login/assets/icons8-voltar-64.png" alt="Voltar"></button>
+                        <button type="submit" title="cadastrar" onclick="cadastroP()" id="btnCadPas">Cadastrar<img
+                                src="../login/assets/icons8-adicionar-usuário-masculino-80.png"
+                                alt="Cadastrar"></button>
+                    </div>
+                </form>
             </div>
         </div>
-        
-    </main>
+    </div>
+    </div>
+
 </body>
 <script src="./funcionario.js"></script>
+
 </html>
