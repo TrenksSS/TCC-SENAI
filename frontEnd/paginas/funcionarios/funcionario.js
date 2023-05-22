@@ -130,6 +130,7 @@ search_btn.addEventListener('keyup', () => {
 
   let linhas = tabela_Voo.getElementsByClassName('cardPrin')
 
+  console.log("oi")
 
   for (let posicao in linhas) {
     if (true === isNaN(posicao)) {
