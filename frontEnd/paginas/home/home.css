@@ -280,6 +280,20 @@ body {
     right: 0px;
     width: 900px;
 }
+#poltrona{
+    background-color: rgb(63, 154, 207);
+    border-radius: 10px;
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    top :10vh;
+    left: 70vw;
+}
+#tpar{
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+}
 #canr{
     font-size: 20px;
     font-weight: bold;
