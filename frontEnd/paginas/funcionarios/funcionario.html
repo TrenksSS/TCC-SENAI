@@ -9,6 +9,42 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./funcionario.css">
     <title>Blue Horizon (Work)</title>
+
+    <script>
+        let funinfo = window.localStorage.getItem('@funinfo')
+        if (funinfo == null) {
+            window.location.href = "./telaLoginFunc/loginFunc.html"
+        } else {
+            funinfo = JSON.parse(funinfo)
+            const options = {
+                method: 'POST',
+                headers: {
+                    Authorization: `${funinfo.token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: `{"id":${funinfo.uid}}`
+            };
+
+            fetch('http://localhost:2550/funcionarios/validate', options)
+                .then(response => response.json())
+                .then(response => {
+                    if (!response.validation) {
+                        localStorage.clear();
+                        window.location.href = "./telaLoginFunc/loginFunc.html"
+                    }
+                    // else {
+                    //     if (response.tipo == "funcionario") {
+                    //         let link = document.createElement('link')
+                    //         link.rel = 'stylesheet'
+                    //         link.href = 'styleFunc.css'
+                    //         document.head.appendChild(link)
+                    //     }
+                    // }
+                })
+                .catch(err => console.error(err));
+        }
+    </script>
+
 </head>
 
 <body onload="onLoad()">

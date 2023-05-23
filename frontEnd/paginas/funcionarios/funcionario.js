@@ -3,7 +3,7 @@ const listaVoo = document.querySelector(".divCards");
 let voo = [];
 let veiculo = [];
 
-var funcinfo = JSON.parse(localStorage.getItem("funcionario"))
+var funcinfo = JSON.parse(localStorage.getItem("@funinfo"))
 const nomeFunc = document.querySelector("#nomeFunc")
 const fotoFunc = document.querySelector("#imgFunc")
 const cargoFunc = document.querySelector("#cargoFunc")
@@ -15,11 +15,12 @@ const statusFunc = document.querySelector("#statusFunc")
 
 function onLoad() {
   loadVoo()
-  fotoFunc.src = "../../../uploads/" + funcinfo.fotoPerfil
-  nomeFunc.innerHTML = funcinfo.nome
-  cargoFunc.innerHTML = funcinfo.cargo
-  nivelFunc.innerHTML = funcinfo.role
-  statusFunc.innerHTML = funcinfo.status
+  console.log(funcinfo.token)
+  fotoFunc.src = "../../../uploads/" + funcinfo.ufoto
+  nomeFunc.innerHTML = funcinfo.uname
+  cargoFunc.innerHTML = funcinfo.ucargo
+  nivelFunc.innerHTML = funcinfo.nivel
+  statusFunc.innerHTML = funcinfo.ustatus
 
 
   const nivelx = 5
