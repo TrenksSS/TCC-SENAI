@@ -15,7 +15,6 @@ const statusFunc = document.querySelector("#statusFunc")
 
 function onLoad() {
   loadVoo()
-  console.log(funcinfo.token)
   fotoFunc.src = "../../../uploads/" + funcinfo.ufoto
   nomeFunc.innerHTML = funcinfo.uname
   cargoFunc.innerHTML = funcinfo.ucargo

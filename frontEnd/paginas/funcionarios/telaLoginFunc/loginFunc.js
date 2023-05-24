@@ -20,17 +20,16 @@ const login = (err) => {
 
     }).then(response => { return response.status, response.json() })
         .then(info => {
-            console.log(info)
             if (info != null) {
 
                 if (info.erro == "Senha inválida") {
                     alertSpan.classList.remove('model')
                     alertSpan.innerHTML = info.erro
-                    setTimeout(() => { alertSpan.classList.add('model') }, 750);
+                    setTimeout(() => { alertSpan.classList.add('model') }, 1200);
                 } else if (info.erro == "Funcionário não encontrado") {
                     alertSpan.classList.remove('model')
                     alertSpan.innerHTML = info.erro
-                    setTimeout(() => { alertSpan.classList.add('model') }, 750);
+                    setTimeout(() => { alertSpan.classList.add('model') }, 1200);
                 } else if (info.validation == true) {
                     localStorage.clear();
                     localStorage.setItem('@funinfo', JSON.stringify(info));

@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,500;1,600&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: 0;
     font-family: 'Poppins';
 }
 
-body{
-    background-color:#021842;
+body {
+    background-color: #021842;
 }
 
-main{
+main {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -21,7 +21,7 @@ main{
     width: 100%;
 }
 
-.imgText{
+.imgText {
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -36,11 +36,11 @@ main{
     /* background-color: white; */
 }
 
-#imgGif{
+#imgGif {
     border-radius: 25px;
 }
 
-.formLogin{
+.formLogin {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,39 +51,36 @@ main{
     width: 40%;
 }
 
-.formLogin > #spanDados {
+.formLogin>#spanDados {
     margin-top: 7%;
 }
 
-.formLogin > span{
+.formLogin>span {
     font-size: 3rem;
     font-weight: bold;
     color: #d479f5;
 
 }
 
-.imginput{
-    position: absolute;
-    left: 57.4%;
-    margin-top: 0%;
-    width: 60px;
-
+.imginput {
+    width: 60px
 }
 
-#login{
+#login {
     background-color: transparent;
-    color:#d479f5;
-    margin-left: 5%;
+    color: #d479f5;
+    /* margin-left: 5%; */
     font-weight: bold;
     font-size: 30px;
-    padding: 2%;
-    width: 200px;
+    padding: 1%;
+    margin-top: 5%;
+    width: 300px;
     border-radius: 100px;
     border: solid 3.5px #d479f5;
 
 }
 
-#login:hover{
+#login:hover {
     transition: 0.3s;
     cursor: pointer;
     background-color: #d479f5;
@@ -92,23 +89,21 @@ main{
     color: white;
 }
 
-.input{
-    gap: 2px;
+.input {
+    gap: 15px;
     display: flex;
     flex-direction: wrap;
     justify-content: center;
     align-items: center;
-    padding: 5%;
-    margin-left: 3.5%;
-
+    padding: 2%;
+    margin-top: 2%;
 }
 
-.inp{
+.inp {
     border: none;
     border-bottom: solid 3px #d479f5;
-    ;
     padding: 2%;
-    padding-left: 5%;
+    padding-left: 7%;
     width: 420px;
     background-color: #03112e6f;
     font-size: 20px;
@@ -120,39 +115,41 @@ main{
 }
 
 ::-webkit-input-placeholder {
-    color:#d479f5;
-  }
-  /* Firefox 19+ */
-  ::-moz-placeholder {
-    color:#d479f5;
-  }
-  /* IE 10+ */
-  :-ms-input-placeholder {
-    color:#d479f5;
-  }
-  /* Firefox 18- */
-  :-moz-placeholder {
-    color:#d479f5;
-  }
-
-.inp:hover{
-    transition: 0.3s;
-    cursor: pointer;
-    padding-left:  6.5%;
+    color: #d479f5;
 }
 
-#spanAlert{
+/* Firefox 19+ */
+::-moz-placeholder {
+    color: #d479f5;
+}
+
+/* IE 10+ */
+:-ms-input-placeholder {
+    color: #d479f5;
+}
+
+/* Firefox 18- */
+:-moz-placeholder {
+    color: #d479f5;
+}
+
+.inp:hover {
+    transition: 0.3s;
+    cursor: pointer;
+    padding-left: 6.5%;
+}
+
+#spanAlert {
     background-color: rgb(253, 159, 159);
     padding: 2%;
     border-radius: 15px;
-    margin-top: -2%;
+    margin-top: 1%;
     margin-left: 3%;
     font-weight: bold;
     color: rgb(228, 17, 17);
-    margin-top: -3.5%;
     font-size: 30px;
 }
 
-.model{
+.model {
     display: none;
 }
