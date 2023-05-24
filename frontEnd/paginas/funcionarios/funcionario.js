@@ -22,7 +22,6 @@ function onLoad() {
   statusFunc.innerHTML = funcinfo.ustatus
 
 
-  const nivelx = 5
 
   if (nivelFunc.innerHTML == 2 || nivelFunc.innerHTML == 3) {
     nivelFunc.style.backgroundColor = "#FFA500"
@@ -58,9 +57,7 @@ function loadVoo() {
 }
 
 function preencherVoo() {
-  // Cria o elemento HTML div
 
-  // Cria o elemento HTML div
   const divCardPrinModel = document.createElement("div");
   divCardPrinModel.classList.add("cardPrin", "model");
 

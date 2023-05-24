@@ -19,7 +19,7 @@ const permitir = (req, res) => {
     const token = req.headers.authorization
 
     jwt.verify(token, process.env.KEY, (err, data) => {
-        console.log(data)
+        // console.log(data)
         if (err != null) res.status(401).json({ ...err, "validation": false }).end()
         else {
             if (data["uid"] == req.body.id) {
