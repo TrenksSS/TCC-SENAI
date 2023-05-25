@@ -62,18 +62,83 @@ main {
     text-decoration: none;
 }
 
+
+
 .aHead:hover {
     color: #ffffff;
     background-color: #03379f;
 }
 
-.inpBusca {
+.inpBusca,
+.inpBusca2 {
     padding: 10px;
-    width: 30%;
+    width: 2%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-bottom: 3px solid #03379f;
+    border-radius: 15px;
+    border: 3px solid #03379f;
+
+}
+
+.inpBusca3 {
+    padding: 10px;
+    width: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 15px;
+    border: 3px solid #03379f;
+
+}
+
+
+.inpBusca3:hover {
+    transition: 0.3s;
+    width: 8%;
+    color: #03379f;
+    background-color: transparent;
+}
+
+
+.inpBusca:hover {
+    transition: 0.3s;
+    width: 18%;
+    background-color: transparent;
+}
+
+.inpBusca2:hover {
+    transition: 0.3s;
+    width: 13%;
+    background-color: transparent;
+}
+
+.inpBusca2:hover>span {
+    display: flex;
+}
+
+.inpBusca2>span {
+    display: none;
+    width: 80%;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+.inpBusca3>span {
+    display: none;
+    width: 80%;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+.inpBusca3:hover>span {
+    display: flex;
 }
 
 .inpBusca>input {
@@ -89,17 +154,30 @@ main {
 .options {
     display: flex;
     align-items: center;
-    height: 100%;
-    width: 70%;
+    justify-content: center;
+    height: 80%;
+    width: 77%;
+    gap: 30px;
     font-size: 25.5px;
     font-weight: bold;
 }
+
+.inpBusca2,
+.inpBusca3 {
+    gap: 10px;
+    color: #03379f;
+}
+
 
 .bx-search {
     color: #03379f;
     font-weight: bold;
     background-size: cover;
 }
+
+
+
+
 
 .logoutSpan {
     display: flex;
@@ -444,7 +522,6 @@ label {
     height: 100px;
     border-radius: 50%;
     padding: 4px;
-    margin-left: -4.3%;
     animation: rotate 4s linear infinite;
     position: absolute;
     background-color: #001eff;
@@ -485,10 +562,17 @@ label {
 
 #abrir-modal,
 #fechar-modal {
-    background-color: transparent;
+    width: 30px;
+    height: 30px;
     border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
+#setaBtn {
+    width: 30px;
+    height: 30px;
+}
 
 .modal {
     display: none;
