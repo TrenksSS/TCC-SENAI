@@ -263,12 +263,12 @@ body {
 /* ------------------------------------ CARD RESERVA */
 
 #cardr {
-    display: flex;
+    display: none;
     z-index: 3;
     top: 5vh;
     left: 5vw;
     position: absolute;
-    background-color: #ffffffcc;
+    background-color: #ffffffec;
     width: 90vw;
     height: 90vh;
     border-radius: 15px;
@@ -292,7 +292,92 @@ body {
 #tpar{
     position: absolute;
     top: 10vh;
-    left: 10vw;
+    left: 8vw;
+    font-weight: bold;
+}
+#par{
+    position: absolute;
+    top: 10vh;
+    left: 15vw;
+    font-weight: bold;
+}
+#tdes{
+    position: absolute;
+    top: 10vh;
+    left: 35vw;
+    font-weight: bold;
+}
+#polt{
+    position: absolute;
+    top: 10vh;
+    left: 63vw;
+    
+}
+#resv{
+    background-color:rgb(63, 154, 207) ;
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    top: 80vh;
+    left: 40vw;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+ #indest{
+    position: absolute;
+    width: 60px;
+    top: 8vh;
+    left: 30vw;
+    font-weight: bold;
+ }
+#des{
+    position: absolute;
+    top: 10vh;
+    left: 42vw;
+    font-weight: bold;
+}
+
+#dtp{
+    position: absolute;
+    top: 20vh;
+    left: 7vw;
+    font-weight: bold;
+}
+#dtpass{
+    position: absolute;
+    top: 20.6vh;
+    left: 12vw;
+}
+
+#htp{
+    position: absolute;
+    top: 20vh;
+    left: 25vw;
+    font-weight: bold;
+}
+#hor{
+    position: absolute;
+    top: 20.5vh;
+    left: 30vw;
+}
+#emp{
+    position: absolute;
+    top: 20vh;
+    left: 45vw;
+    font-weight: bold;
+}
+#empr{
+    position: absolute;
+    top: 20vh;
+    left: 53vw;
+    font-weight: bold;
+}
+#txp{
+    position: absolute;
+    top: 27vh;
+    left: 15vw;
+    font-weight: bold;
 }
 #canr{
     font-size: 20px;
@@ -315,4 +400,96 @@ body {
 }
 #titulocard{
     font-weight: bold;
+}
+
+
+/* --------------------------------------- INFO FORM */
+
+#nf{
+    position: absolute;
+    top: 33vh;
+    left: 11vw;
+    font-weight: bold;
+    font-size: 20px;
+}
+#nfin{
+    position: absolute;
+    top: 36vh;
+    left: 11vw;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    border-color: rgb(63, 154, 207);
+}
+
+#cp{
+    position: absolute;
+    top: 45vh;
+    left: 11vw;
+    font-weight: bold;
+    font-size: 20px;
+}
+#cpin{
+    position: absolute;
+    top: 48vh;
+    left: 11vw;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    border-color: rgb(63, 154, 207);
+}
+
+#ps{
+    position: absolute;
+    top: 33vh;
+    left: 33vw;
+    font-weight: bold;
+    font-size: 20px;
+}
+#psin{
+    position: absolute;
+    top: 36vh;
+    left: 33vw;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    border-color: rgb(63, 154, 207);
+}
+
+#dn{
+    position: absolute;
+    top: 45vh;
+    left: 33vw;
+    font-weight: bold;
+    font-size: 20px;
+}
+#dnin{
+    position: absolute;
+    top: 48vh;
+    left: 33vw;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    border-color: rgb(63, 154, 207);
+}
+#nc{
+    position: absolute;
+    top: 55vh;
+    left: 20vw;
+    font-weight: bold;
+    font-size: 20px;
+}
+#ncin{
+    position: absolute;
+    top: 58vh;
+    left: 20vw;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    border-color: rgb(63, 154, 207);
+}
+#inf{
+    position: absolute;
+    top: 75vh;
+    left: 38vw;
 }
