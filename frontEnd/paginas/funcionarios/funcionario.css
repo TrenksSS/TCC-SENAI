@@ -72,10 +72,12 @@ main {
 .inpBusca,
 .inpBusca2 {
     padding: 10px;
-    width: 2%;
+    width: 3%;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+
     border-radius: 15px;
     border: 3px solid #03379f;
 
@@ -83,10 +85,10 @@ main {
 
 .inpBusca3 {
     padding: 10px;
-    width: 2%;
+    width: 3%;
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: center;
     border-radius: 15px;
     border: 3px solid #03379f;
 
@@ -95,7 +97,7 @@ main {
 
 .inpBusca3:hover {
     transition: 0.3s;
-    width: 8%;
+    width: 12%;
     color: #03379f;
     background-color: transparent;
 }
@@ -103,13 +105,13 @@ main {
 
 .inpBusca:hover {
     transition: 0.3s;
-    width: 18%;
+    width: 30%;
     background-color: transparent;
 }
 
 .inpBusca2:hover {
     transition: 0.3s;
-    width: 13%;
+    width: 25%;
     background-color: transparent;
 }
 
@@ -151,15 +153,20 @@ main {
     outline: none;
 }
 
+
+
 .options {
     display: flex;
     align-items: center;
+    text-align: right;
     justify-content: center;
     height: 80%;
-    width: 77%;
-    gap: 30px;
+    gap: 15px;
+    width: 600px;
+    margin-left: 40%;
     font-size: 25.5px;
     font-weight: bold;
+    background-color: #fe0000;
 }
 
 .inpBusca2,
@@ -182,10 +189,10 @@ main {
 .logoutSpan {
     display: flex;
     gap: 5px;
-    margin-left: 2%;
     align-items: center;
     text-align: center;
-    width: 100%;
+    width: 10%;
+    margin-left: 5%;
 }
 
 .divCards {
@@ -341,7 +348,6 @@ label {
     background-color: #001eff96;
     width: 100%;
     z-index: 1;
-    /* margin-top: -6.77%; */
     height: 100%;
 }
 
@@ -598,9 +604,6 @@ label {
     gap: 10px;
     flex-direction: column;
     align-items: center;
-
-    /* justify-content: center; */
-
 }
 
 .modal.aberto {
