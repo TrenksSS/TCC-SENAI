@@ -208,3 +208,23 @@ var uploadLabel = document.getElementById('upload-label');
 fileUpload.addEventListener('change', function () {
   uploadLabel.innerHTML = this.files[0].name;
 });
+
+
+function modelPassageiro() {
+  document.querySelector('.divCards').classList.add('model')
+  document.querySelector('.btnCadastroPass').classList.remove('model')
+  document.querySelector('.cm').classList.remove('model')
+  modal.classList.remove('aberto');
+  botaoAbrir.classList.remove('model')
+  botaoFechar.classList.add('model')
+
+}
+
+function modelPassagens() {
+  document.querySelector('.divCards').classList.remove('model')
+  document.querySelector('.cm').classList.add('model')
+  document.querySelector('.btnCadastroPass').classList.add('model')
+  modal.classList.remove('aberto');
+  botaoAbrir.classList.remove('model')
+  botaoFechar.classList.add('model')
+}

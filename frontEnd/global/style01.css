@@ -1,0 +1,735 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,500;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Poppins';
+}
+
+
+
+header {
+    background-color: rgb(211, 236, 253);
+    height: 120px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 5px;
+}
+
+main {
+    display: flex;
+    width: 100%;
+}
+
+#logo {
+    margin-left: 15%;
+    width: 90px;
+}
+
+.spanEmpresa {
+    margin-left: -9.5%;
+    color: #03379f;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+
+.spanLogout {
+    margin-left: 40%;
+    color: #03379f;
+    font-weight: bold;
+    width: 60%;
+    font-size: 20px;
+}
+
+.aHead {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #03379f;
+    padding: 10px;
+    font-weight: bold;
+    height: 30px;
+    margin-top: 5%;
+    width: 190px;
+    font-size: 30px;
+    border: 3px solid #03379f;
+    border-radius: 100px;
+    text-decoration: none;
+}
+
+
+
+.aHead:hover {
+    color: #ffffff;
+    background-color: #03379f;
+}
+
+.inpBusca,
+.inpBusca2 {
+    padding: 10px;
+    width: 7%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: transparent;
+    border: 3px solid #03379f;
+
+}
+
+.inpBusca {
+    padding: 10px;
+    width: 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: transparent;
+    border: 3px solid #03379f;
+
+}
+
+.inpBusca3 {
+    padding: 10px;
+    width: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border: 3px solid #03379f;
+
+}
+
+
+.inpBusca3:hover {
+    transition: 0.3s;
+    width: 12%;
+    color: #03379f;
+    background-color: transparent;
+}
+
+
+.inpBusca:hover {
+    transition: 0.3s;
+    width: 30%;
+    background-color: transparent;
+}
+
+.inpBusca2:hover {
+    transition: 0.3s;
+    width: 25%;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.inpBusca2:hover>span {
+    display: flex;
+}
+
+.inpBusca2>span {
+    display: none;
+    width: 80%;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+.inpBusca3>span {
+    display: none;
+    width: 80%;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+.inpBusca3:hover>span {
+    display: flex;
+}
+
+.inpBusca>input {
+
+    width: 100%;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+
+
+.options {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    justify-content: center;
+    height: 80%;
+    gap: 55px;
+    width: 800px;
+    margin-left: 35%;
+    font-size: 25.5px;
+    font-weight: bold;
+}
+
+.inpBusca2,
+.inpBusca3 {
+    gap: 10px;
+    color: #03379f;
+}
+
+
+.bx-search {
+    color: #03379f;
+    font-weight: bold;
+    background-size: cover;
+}
+
+
+
+
+
+.logoutSpan {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+    width: 10%;
+    margin-left: 5%;
+}
+
+.divCards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    height: 58.5vh;
+    padding: 20px;
+    width: 90%;
+    margin-left: 4%;
+    margin-top: 7.5%;
+    border-radius: 15px;
+    overflow-y: scroll;
+}
+
+.cardPrin {
+    width: 20%;
+    height: 34vh;
+}
+
+.cardVoo {
+    display: flex;
+    height: 13vh;
+    width: 100%;
+    padding: 2%;
+    border-radius: 10px;
+    margin-top: 1%;
+    margin-left: 1.5%;
+    height: 16vh;
+    text-align: left;
+    justify-content: center;
+    padding: 5.5%;
+    padding-left: 5%;
+    flex-direction: column;
+    /* border: 3px solid transparent; */
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+}
+
+#passageiroNovo {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    width: 20%;
+    padding: 0.5%;
+    position: absolute;
+    left: 4.5%;
+    top: 17%;
+    font-size: 25px;
+
+}
+
+#btnCadPassageiro {
+    position: absolute;
+    left: 65%;
+    height: 80px;
+    line-height: 80px;
+    width: 80px;
+    font-size: 2em;
+    font-weight: bold;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 2.5px 1px 6.5px transparent;
+    background-color: #001eff;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+}
+
+
+
+#btnCadPassageiro:hover {
+    background-color: #ffffff;
+    color: #001eff;
+}
+
+#spanNovopass {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: #ffffff;
+    padding: 10px;
+    padding-right: 40px;
+    height: 40px;
+    border-radius: 100px;
+    width: 40%;
+    background-color: #001eff;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: 2px 2px 6.5px transparent;
+
+}
+
+
+
+
+
+label {
+    color: #03379f;
+    font-size: 1.6rem;
+    font-weight: bold;
+
+
+}
+
+/* cores do placeholder */
+
+::-webkit-input-placeholder {
+    color: #03379f;
+}
+
+/* Firefox 19+ */
+::-moz-placeholder {
+    color: #03379f;
+}
+
+/* IE 10+ */
+:-ms-input-placeholder {
+    color: #03379f;
+}
+
+/* Firefox 18- */
+:-moz-placeholder {
+    color: #03379f;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.model {
+    display: none;
+}
+
+.contentForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #001eff96;
+    width: 100%;
+    z-index: 1;
+    height: 100%;
+}
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    width: 54%;
+    border-radius: 15px;
+    height: 90%;
+    padding-left: 34px;
+    padding-right: 3%;
+}
+
+.form>.contentH1>h1 {
+
+    color: #8880FE;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+
+.contentH1 {
+    margin-top: 5%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.opa {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.conteinerLab {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1300px;
+    padding-right: 50px;
+    gap: 25px;
+    margin-left: 2%;
+    height: 60%;
+}
+
+.contentL>input {
+    width: 80%;
+    padding-left: 2%;
+    font-size: 20px;
+    height: 50px;
+    padding-right: 10px;
+    border-radius: 15px;
+    border: none;
+    font-weight: bold;
+    background-color: #03379f;
+    color: #ffffff;
+}
+
+.contentL2>input {
+    width: 80%;
+    padding-right: 10px;
+    padding-left: 2%;
+    height: 50px;
+    font-weight: bold;
+    border-radius: 15px;
+    font-size: 20px;
+    border: none;
+    background-color: #03379f;
+    color: #ffffff;
+}
+
+
+
+
+.contentL,
+.contentL2 {
+    display: flex;
+    margin-left: 10%;
+    width: 30%;
+    flex-direction: column;
+}
+
+.contentL2 {
+    height: 500px;
+}
+
+.butoes {
+    margin-top: -3.5%;
+    display: flex;
+    width: 76%;
+}
+
+#btnCadPas {
+    display: flex;
+    left: 57%;
+    align-items: center;
+    position: fixed;
+    font-size: 30px;
+    margin-right: 80px;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #8880FE;
+    padding: 5px;
+    padding-right: 25px;
+    padding-left: 20px;
+    border-radius: 50px;
+    border: 5px solid #8880FE;
+}
+
+#btnCadPas:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #8880FE;
+
+}
+
+#btnVoltar {
+    position: fixed;
+    margin-top: 0.8%;
+    /* left: 31.5%; */
+    left: 27.4%;
+    background-color: transparent;
+    border: none;
+}
+
+#btnVoltar:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #8880FE;
+    border-radius: 50%;
+    height: 60px;
+    line-height: 60px;
+    width: 60px;
+    background-color: #8880FE;
+    border: 2px solid #8880FE;
+}
+
+#imgVoltar {
+    width: 100%;
+    height: 100%;
+}
+
+#passageiroImg {
+    position: absolute;
+    left: 62.9%;
+    top: 10.5%;
+    width: 64px;
+    height: 64px;
+}
+
+#nascimento {
+    background-color: white;
+    color: #03379f;
+    font-weight: bold;
+    border: 3px solid #03379f;
+}
+
+#nascimento:hover {
+    cursor: pointer;
+}
+
+#imgFunc {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 1;
+    background-color: #ffffff;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 4px;
+    animation: rotate 4s linear infinite;
+    position: absolute;
+    background-color: #001eff;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        background: rgb(2, 0, 36);
+        background: linear-gradient(90deg, rgb(145, 207, 248) 0%, rgb(0, 0, 0) 35%, rgb(0, 0, 0)0%);
+    }
+
+    25% {
+        transform: rotate(180deg);
+        background: rgb(2, 0, 36);
+        background: linear-gradient(90deg, rgb(145, 207, 248) 0%, rgb(0, 0, 0) 35%, rgb(0, 0, 0)0%);
+    }
+
+    50% {
+        transform: rotate(360deg);
+        background: rgb(2, 0, 36);
+        background: linear-gradient(90deg, rgb(145, 207, 248) 0%, rgb(0, 0, 0) 35%, rgb(0, 0, 0)0%);
+    }
+
+    75% {
+        transform: rotate(540deg);
+        background: rgb(2, 0, 36);
+        background: linear-gradient(90deg, rgb(145, 207, 248) 0%, rgb(0, 0, 0) 35%, rgb(0, 0, 0)0%);
+    }
+
+    100% {
+        transform: rotate(720deg);
+        background: rgb(2, 0, 36);
+        background: linear-gradient(90deg, rgb(145, 207, 248) 0%, rgb(0, 0, 0) 35%, rgb(0, 0, 0)0%);
+    }
+}
+
+
+#abrir-modal,
+#fechar-modal {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#setaBtn {
+    width: 30px;
+    height: 30px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 15%;
+    padding: 20px;
+    border-radius: 15px;
+    color: #03379f;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    left: 74%;
+    width: 20%;
+    height: 40.5%;
+    background-color: rgb(211, 236, 253);
+
+
+}
+
+.aleat {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.modalPerfil {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal.aberto {
+    display: flex;
+    animation: descer 0.3s;
+}
+
+
+@keyframes descer {
+    from {
+        transform: translateY(-10%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes subir {
+    from {
+        transform: translateY(5%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.infosFunc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 90px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+}
+
+#file-upload {
+    display: none;
+}
+
+#upload-label {
+    display: flex;
+    padding: 5px 10px;
+    font-size: 26px;
+    width: 79%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    background-color: #03379f;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#upload-label:hover {
+    background-color: rgb(5, 21, 39);
+}
+
+.tagPerfilFunc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+
+}
+
+#nivelFunc {
+    background-color: #fe0000;
+    color: white;
+    margin-left: 1.5%;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-top: 2px;
+    border-bottom: 2px;
+    border-radius: 5px;
+}
+
+.infosPlus {
+    display: flex;
+    flex-direction: column;
+}
+
+/* #cargoFunc {
+    margin-left: 9%;
+} */
+
+#circuleStatus {
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    border-radius: 100%;
+    color: #009947;
+}
+
+#spanCircule {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    display: flex;
+    background-color: #009947;
+}

@@ -58,29 +58,20 @@
                 <input class="buscarInp" type="text" placeholder="Busque aqui...">
                 <i class='bx bx-search'></i>
             </div>
-            <div class="inpBusca2">
+            <button class="inpBusca2" onclick="modelPassageiro()" title="Abrir opções passageiro">
                 <span>passageiros</span>
                 <img src="../login/assets/icons8-assento-de-voo-64.png" width="30px" height="30px" alt="">
-            </div>
-            <div class="inpBusca2">
+            </button>
+            <button class="inpBusca2" onclick="modelPassagens()">
                 <span>passagens</span>
                 <img src="../login/assets/icons8-cartão-de-embarque-64.png" width="30px" height="30px" alt="">
-            </div>
+            </button>
             <div class="inpBusca3">
                 <span>Perfil</span>
                 <button id="abrir-modal"><img src="../login/assets/icons8-divisa-circulada-à-abaixo-64.png"
                         alt="Abrir modal perfil" title="Abrir perfil" id="setaBtn"></button>
                 <button id="fechar-modal" class="model"><img src="../login/assets/icons8-divisa-circulada-acima-64.png"
                         alt="Fechar modal perfil" title="Fechar" id="setaBtn"></button>
-            </div>
-
-            <div class="logoutSpan">
-                <div class="tagPerfilFunc">
-                    <div class="circle">
-                    </div>
-                    <img id="imgFunc" src="" alt="">
-                    <!-- Botão de abertura do modal -->
-                </div>
             </div>
         </div>
 
@@ -89,27 +80,73 @@
         <div class="modal">
             <div class="modalPerfil">
                 <div class="infosFunc">
-                    <span id="nomeFunc">Antônio de Lima Reis</span>
-                    <span id="cargoFunc">Antônio de Lima Reis</span>
-                    <span title="Nível de Acesso">Nível: <span id="nivelFunc"> 55</span></span>
-                    <span id="statusFunc">Antônio de Lima Reis</span>
+                    <div class="logoutSpan">
+                        <div class="tagPerfilFunc">
+                            <div class="circle">
+                            </div>
+                            <img id="imgFunc" src="" alt="">
+                        </div>
+                    </div>
+                    <div class="infosPlus">
+                        <span id="nomeFunc">Antônio de Lima Reis</span>
+                        <span id="numFunc">+55 19 998805602</span>
+                        <span id="emailFunc">MEHGOC@gmail.com</span>
+                    </div>
                 </div>
+                <div class="aleat">
+                    <img src="../login/assets/icons8-puzzle-64.png" alt="imagem  ilutrativa de função" width="30px">
+                    <span>Função/Cargo</span>
+                </div>
+                <div class="aleat">
+                    <img src="../login/assets/icons8-trabalho-50.png" alt="chave/ nível de acesso" width="30px">
+                    <span id="cargoFunc">Antônio de Lima Reis</span>
+                </div>
+                <div class="aleat">
+                    <img src="../login/assets/icons8-chave-24.png" alt="chave/ nível de acesso" width="30px">
+                    <span title="Nível de Acesso">Nível de Acesso:</span><span id="nivelFunc">55</span>
+                </div>
+                <div class="aleat">
+
+                    <div id="circuleStatus">
+                        <div id="spanCircule"></div>
+                    </div> <span id="statusFunc">Antônio de
+                        Lima Reis</span>
+                </div>
+
 
                 <a title="Sair" onclick="localStorage.clear()" class="aHead"
                     href="./telaLoginFunc/loginFunc.html">Logout</a><i class="far fa-togoout icon-modify"></i>
             </div>
+
+        </div>
+        <div class="btnCadastroPass model">
+            <div id="passageiroNovo"><span id="spanNovopass">Cadastrar</span><button onclick="removeModelCad()"
+                    id="btnCadPassageiro" title="Cadastrar passageiro">+</button>
+            </div>
         </div>
 
-        <div id="passageiroNovo"><span id="spanNovopass">Cadastrar</span><button onclick="removeModelCad()"
-                id="btnCadPassageiro" title="Cadastrar passageiro">+</button></div>
-        <!-- <div class="textDispo"> <img id="dispo" src="../../../assets/mundo.png" alt=""><h1>Voos disponiveis: </h1></div> -->
-        <div class="divCards">
+
+        <div class="divCards model">
         </div>
+        <div class=" cm model">
+            <div class="cardsPassageiro">
+                <div>
+                    <span id="nomePassageiro"></span>
+                    <span id="cpfPassageiro"></span>
+                    <span id="passaportePassageiro"></span>
+                    <span id="nascimentoPassageiro"></span>
+                    <span id="nacionalidadePassageiro"></span>
+                    <span id="passagensPassageiro"></span>
+                    <span id="emailPassageiro"></span>
+                    <span id="constatosPassageiro"></span>
+                </div>
+            </div>
+        </div>
+
     </main>
     <div class="opa model">
         <div class="contentForm">
             <div class="form">
-                <!-- <img id="passageiroImg" src="../login/assets/icons8-passageiros-com-bagagem-64.png" alt="imagem de passageiro"> -->
                 <div class="contentH1">
                     <h1>Cadastro de Passageiro</h1>
                 </div>
