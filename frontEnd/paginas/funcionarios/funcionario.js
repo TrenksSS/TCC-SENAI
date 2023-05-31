@@ -47,13 +47,6 @@ function loadVoo() {
     )
     .catch(err => console.error(err))
 
-  fetch("http://localhost:2550/veiculos", options)
-    .then(res => res.json())
-    .then(res => {
-      veiculo = res;
-    }
-    )
-    .catch(err => console.error(err))
 }
 
 function preencherVoo() {
