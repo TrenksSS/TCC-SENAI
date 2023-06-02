@@ -41,4 +41,17 @@ fetch("http://localhost:2550/passagens")
     const part = document.querySelector("#partida")
     const dest = document.querySelector("#destino")
 
-    
+    function loadVoo() {
+
+        const options = { method: 'GET' }
+      
+        fetch("http://localhost:2550/voos", options)
+          .then(res => res.json())
+          .then(res => {
+            voo = res;
+            preencherVoo()
+          }
+          )
+          .catch(err => console.error(err))
+      
+      }
