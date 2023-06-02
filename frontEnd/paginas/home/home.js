@@ -36,9 +36,3 @@ fetch("http://localhost:2550/passagens")
         let card = document.querySelector("#cardr")
         card.style = "display:flex"
     }
-
-    const datap = document.querySelector("#datap")
-    const part = document.querySelector("#partida")
-    const dest = document.querySelector("#destino")
-
-    
