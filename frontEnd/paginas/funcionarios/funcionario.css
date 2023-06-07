@@ -43,8 +43,7 @@
 .divImp {
     display: flex;
     justify-content: center;
-    width: 100%;
-    padding: 1%;
+    width: 200px;
     height: 15vh;
     color: aliceblue;
     align-items: center;
@@ -53,9 +52,23 @@
 #imgPassageiro {
     width: 150px;
     border-radius: 15px;
+    padding: 10px;
 }
 
 .divInfos {
     display: flex;
     flex-direction: column;
+}
+
+.docInf {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.divInfos>p {
+    background-color: rgb(10, 10, 10);
+    color: white;
+    width: 100px;
 }
