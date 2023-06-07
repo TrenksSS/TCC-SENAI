@@ -1,7 +1,9 @@
-const listaVoo = document.querySelector(".divCards");
+const listaVoo = document.querySelector(".divCards")
+const divClonePass = document.querySelector(".cardClone")
+const divAppendPass = document.querySelector(".cardsPassageiro")
 
-let voo = [];
-let veiculo = [];
+let voo = []
+let passageiro = []
 
 var funcinfo = JSON.parse(localStorage.getItem("@funinfo"))
 const nomeFunc = document.querySelector("#nomeFunc")
@@ -15,6 +17,7 @@ const statusFunc = document.querySelector("#statusFunc")
 
 function onLoad() {
   loadVoo()
+  loadPassageiro()
   fotoFunc.src = "../../../uploads/" + funcinfo.ufoto
   nomeFunc.innerHTML = funcinfo.uname
   cargoFunc.innerHTML = funcinfo.ucargo
@@ -41,58 +44,68 @@ function loadVoo() {
   fetch("http://localhost:2550/voos", options)
     .then(res => res.json())
     .then(res => {
-      voo = res;
+      voo = res
       preencherVoo()
-    }
-    )
+    })
     .catch(err => console.error(err))
 
 }
 
+function loadPassageiro() {
+  const options = { 'method': 'GET' }
+  fetch("http://localhost:2550/passageiros", options)
+    .then(res => res.json())
+    .then(res => {
+      passageiro = res
+      preecherPass()
+    })
+    .catch(err => console.error(err))
+}
+
 function preencherVoo() {
 
-  const divCardPrinModel = document.createElement("div");
-  divCardPrinModel.classList.add("cardPrin", "model");
+  const divCardPrinModel = document.createElement("div")
+  divCardPrinModel.classList.add("cardPrin", "model")
 
-  const divCardVoo = document.createElement("div");
-  divCardVoo.classList.add("cardVoo");
+  const divCardVoo = document.createElement("div")
+  divCardVoo.classList.add("cardVoo")
 
-  const spanDestino = document.createElement("span");
-  spanDestino.innerText = "Destino: ";
+  const spanDestino = document.createElement("span")
+  spanDestino.innerText = "Destino: "
 
-  const spanDestinoValue = document.createElement("span");
-  spanDestinoValue.id = "spanDestino";
-  spanDestino.appendChild(spanDestinoValue);
+  const spanDestinoValue = document.createElement("span")
+  spanDestinoValue.id = "spanDestino"
+  spanDestino.appendChild(spanDestinoValue)
 
 
-  const spanDataHora = document.createElement("span");
-  spanDataHora.innerText = "Data: ";
+  const spanDataHora = document.createElement("span")
+  spanDataHora.innerText = "Data: "
 
-  const spanDataHoraValue = document.createElement("span");
-  spanDataHoraValue.id = "spanDataHora";
-  spanDataHora.appendChild(spanDataHoraValue);
+  const spanDataHoraValue = document.createElement("span")
+  spanDataHoraValue.id = "spanDataHora"
+  spanDataHora.appendChild(spanDataHoraValue)
 
-  const spanDescricao = document.createElement("span");
-  spanDescricao.innerText = "Descrição: ";
+  const spanDescricao = document.createElement("span")
+  spanDescricao.innerText = "Descrição: "
 
-  const spanDescricaoValue = document.createElement("span");
-  spanDescricaoValue.id = "spanDescricao";
-  spanDescricao.appendChild(spanDescricaoValue);
+  const spanDescricaoValue = document.createElement("span")
+  spanDescricaoValue.id = "spanDescricao"
+  spanDescricao.appendChild(spanDescricaoValue)
 
-  divCardVoo.appendChild(spanDestino);
-  divCardVoo.appendChild(spanDataHora);
-  divCardVoo.appendChild(spanDescricao);
+  divCardVoo.appendChild(spanDestino)
+  divCardVoo.appendChild(spanDataHora)
+  divCardVoo.appendChild(spanDescricao)
 
-  divCardPrinModel.appendChild(divCardVoo);
+  divCardPrinModel.appendChild(divCardVoo)
 
 
 
   // Configura a função preencherVoo()
   voo.forEach((v) => {
-    let linha = divCardPrinModel.cloneNode(true);
-    linha.classList.remove("model");
+    let linha = divCardPrinModel.cloneNode(true)
+    linha.classList.remove("model")
 
-    linha.querySelector("#spanDestino").innerHTML = v.destino;
+    linha.querySelector("#spanDestino").innerHTML = v.destino
     linha.querySelector("#spanDataHora").innerHTML =
       v.data_saida.slice(8, 10) +
       "/" +
@@ -100,13 +113,28 @@ function preencherVoo() {
       "/" +
       v.data_saida.slice(0, 4) +
       "ㅤ" +
-      v.data_saida.slice(11, 19);
-    linha.querySelector("#spanDescricao").innerHTML = v.descricao;
-    listaVoo.appendChild(linha);
-  });
+      v.data_saida.slice(11, 19)
+    linha.querySelector("#spanDescricao").innerHTML = v.descricao
+    listaVoo.appendChild(linha)
+  })
 }
 
+function preecherPass() {
+  passageiro.forEach((ps) => {
+    console.log(ps)
+    let linha = divClonePass.cloneNode(true)
+    linha.querySelector("#imgPassageiro").src = "../../../uploads/" + ps.imagem
+    linha.querySelector("#nomePassageiro").innerHTML = ps.nome
+    linha.querySelector("#cpfPassageiro").innerHTML = ps.cpf
+    linha.querySelector("#passaportePassageiro").innerHTML = ps.passaporte
+    linha.querySelector("#nascimentoPassageiro").innerHTML = ps.data_nascimento.slice(0, 10)
+    linha.querySelector("#nacionalidadePassageiro").innerHTML = ps.nacionalidade
+    linha.querySelector("#emailPassageiro").innerHTML = ps.nome
 
+
+    divAppendPass.appendChild(linha)
+  })
+}
 
 
 var search_btn = document.querySelector('.buscarInp')
@@ -156,9 +184,9 @@ function cadastroP() {
 
   const myForm = document.getElementById('myForm')
   myForm.addEventListener('submit', function (event) {
-    event.preventDefault();
+    event.preventDefault()
     console.log("oi")
-    const formData = new FormData(myForm);
+    const formData = new FormData(myForm)
 
     fetch('http://localhost:2550/passageiros/crypt', {
       method: 'POST',
@@ -166,48 +194,48 @@ function cadastroP() {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        console.log(data)
       })
       .catch((error) => {
-        console.error(error);
-      });
-  });
+        console.error(error)
+      })
+  })
 }
 
 
 // Seleciona os elementos do DOM
-const botaoAbrir = document.getElementById('abrir-modal');
-const botaoFechar = document.getElementById('fechar-modal');
-const modal = document.querySelector('.modal');
+const botaoAbrir = document.getElementById('abrir-modal')
+const botaoFechar = document.getElementById('fechar-modal')
+const modal = document.querySelector('.modal')
 
 botaoAbrir.addEventListener('click', () => {
   botaoAbrir.classList.add('model')
   botaoFechar.classList.remove('model')
-  modal.classList.add('aberto');
-});
+  modal.classList.add('aberto')
+})
 
 // Adiciona um evento de clique ao botão de fechamento do modal
 botaoFechar.addEventListener('click', () => {
-  modal.classList.remove('aberto');
+  modal.classList.remove('aberto')
   botaoAbrir.classList.remove('model')
   botaoFechar.classList.add('model')
 
-});
+})
 
 
-var fileUpload = document.getElementById('file-upload');
-var uploadLabel = document.getElementById('upload-label');
+var fileUpload = document.getElementById('file-upload')
+var uploadLabel = document.getElementById('upload-label')
 
 fileUpload.addEventListener('change', function () {
-  uploadLabel.innerHTML = this.files[0].name;
-});
+  uploadLabel.innerHTML = this.files[0].name
+})
 
 
 function modelPassageiro() {
   document.querySelector('.divCards').classList.add('model')
   document.querySelector('.btnCadastroPass').classList.remove('model')
   document.querySelector('.cm').classList.remove('model')
-  modal.classList.remove('aberto');
+  modal.classList.remove('aberto')
   botaoAbrir.classList.remove('model')
   botaoFechar.classList.add('model')
 
@@ -217,7 +245,7 @@ function modelPassagens() {
   document.querySelector('.divCards').classList.remove('model')
   document.querySelector('.cm').classList.add('model')
   document.querySelector('.btnCadastroPass').classList.add('model')
-  modal.classList.remove('aberto');
+  modal.classList.remove('aberto')
   botaoAbrir.classList.remove('model')
   botaoFechar.classList.add('model')
 }

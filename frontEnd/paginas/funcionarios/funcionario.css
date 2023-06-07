@@ -11,12 +11,12 @@
     width: 100%;
     border-radius: 15px;
     overflow-y: scroll;
-    background-color: black;
+    margin-top: -1.2%;
+    margin-left: -0.5%;
 }
 
 .cm {
     height: 63.5vh;
-    color: aliceblue;
     padding: 20px;
     width: 90%;
     margin-left: 4%;
@@ -24,33 +24,38 @@
     border-radius: 15px;
 }
 
-.cardsPassageiro>div {
+.cardClone {
     display: flex;
     border-radius: 10px;
     margin-top: 5%;
     margin-left: 1.5%;
-    height: 20vh;
+    height: 30vh;
     justify-content: center;
+    padding: 1.5%;
+    gap: 15px;
     flex-direction: column;
     color: black;
     text-align: left;
     /* border: 3px solid transparent; */
-    background-color: white;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .divImp {
-    background-color: black;
     display: flex;
     justify-content: center;
     width: 100%;
+    padding: 1%;
     height: 15vh;
     color: aliceblue;
     align-items: center;
 }
 
 #imgPassageiro {
-    width: 200px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    width: 150px;
+    border-radius: 15px;
+}
+
+.divInfos {
+    display: flex;
+    flex-direction: column;
 }

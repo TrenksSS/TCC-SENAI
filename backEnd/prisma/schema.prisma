@@ -8,12 +8,12 @@ datasource db {
 }
 
 model Funcionario {
-  id    Int    @id @default(autoincrement())
-  nome  String
-  email String
-  senha String
-  cargo String
-  nivel String
+  id     Int     @id @default(autoincrement())
+  nome   String
+  email  String
+  senha  String
+  cargo  String
+  nivel  String
   imagem String?
   status String
 }
@@ -65,28 +65,25 @@ model Voo {
 }
 
 model Passageiro {
-  id   Int    @id @default(autoincrement())
-  nome String
-  cpf String @unique
-  passaporte String  @unique
+  id              Int        @id @default(autoincrement())
+  nome            String
+  cpf             String     @unique
+  passaporte      String     @unique
   data_nascimento String
-  nacionalidade String
-  role String @default("Passageiro")
-  email String?
-  senha String?
-  imagem String?
-  passagens Passagem[]
-  contatos Contato []
+  nacionalidade   String
+  role            String     @default("Passageiro")
+  email           String?
+  senha           String?
+  imagem          String?
+  passagens       Passagem[]
+  contatos        Contato[]
 }
 
-
-
-
-model Contato{
-  id Int @id @default(autoincrement())
+model Contato {
+  id            Int        @id @default(autoincrement())
   id_passageiro Int
-  numero_tel String @unique
-  tipo String
+  numero_tel    String     @unique
+  tipo          String
   passageiro    Passageiro @relation(fields: [id_passageiro], references: [id])
 }
 
