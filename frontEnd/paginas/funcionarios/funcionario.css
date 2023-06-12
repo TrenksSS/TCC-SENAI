@@ -147,18 +147,19 @@
     background-color: aliceblue;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 70%;
     height: 80%;
-    gap: 20px;
 }
 
 .infosedit>div {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
     background-color: aqua;
     width: 50%;
-    height: 20vh;
+    height: 30vh;
 }
 
 .imgeditP {
@@ -167,4 +168,14 @@
     border-radius: 100%;
     border: 5px solid white;
     box-shadow: 1px 1px 20px white;
+}
+
+.infosedit>div>input {
+    width: 400px;
+    border: none;
+    border-bottom: 4px solid rgb(148, 157, 254);
+    height: 4vh;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 3px 5px 11px rgb(1, 1, 1);
 }
