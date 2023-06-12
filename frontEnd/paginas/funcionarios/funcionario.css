@@ -27,11 +27,11 @@
 .cardClone {
     display: flex;
     border-radius: 10px;
-    margin-top: 5%;
-    margin-left: 1.5%;
-    height: 30vh;
+    border: 3px solid rgba(0, 0, 0, 0.27);
+    margin-top: 2%;
+    height: 45vh;
     justify-content: center;
-    padding: 1.5%;
+    padding: 2.5%;
     gap: 15px;
     flex-direction: column;
     color: black;
@@ -43,20 +43,26 @@
 .divImp {
     display: flex;
     justify-content: center;
-    width: 200px;
-    height: 15vh;
+    width: 250px;
+    height: 50vh;
     color: aliceblue;
     align-items: center;
 }
 
 #imgPassageiro {
-    width: 150px;
-    border-radius: 15px;
-    padding: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    padding: 5px;
+    border: 3px solid rgb(217, 211, 211);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.441) 0px 10px 20px, rgba(20, 9, 232, 0.23) 0px 5px 10px;
+
 }
 
 .divInfos {
     display: flex;
+    gap: 10px;
     flex-direction: column;
 }
 
@@ -71,4 +77,65 @@
     background-color: rgb(10, 10, 10);
     color: white;
     width: 100px;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+#btneditP{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: none;
+    padding: 4px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.745);
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+#btneditP:hover{
+    background-color: rgb(41, 40, 40);
+    cursor: pointer;
+
+}
+
+.content-editP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #000000d3;
+    width: 100%;
+    z-index: 1;
+    height: 100%;
+}
+
+.modelEdit{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.formP{
+    
+    background-color: aliceblue;
+    margin-top: 5%;
+    height: 70%;
+    width: 70%;
+    padding: 50px;
+    border-radius: 20px;
+    border: 3px solid  rgb(0, 0, 0);
+    box-shadow: rgba(56, 56, 56, 0.441) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 5px 10px;
+}
+
+.formeditP{
+    display: flex;
+    background-color: black;
+    align-items: center;
+    height: 90%;
 }

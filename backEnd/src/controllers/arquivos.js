@@ -1,7 +1,7 @@
 const { PrismaClient } = require('@prisma/client')
 
 const prisma = new PrismaClient()
-const multer = require('multer');
+const multer = require('multer')
 const path = require('path')
 
 const read = (req, res) => {

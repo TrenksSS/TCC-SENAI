@@ -55,7 +55,7 @@
         </div>
         <div class="options">
             <div class="inpBusca">
-                <input class="buscarInp" type="text" placeholder="Busque aqui...">
+                <input class="buscarInp" type="text" placeholder="Pesquise aqui...">
                 <i class='bx bx-search'></i>
             </div>
             <button class="inpBusca2" onclick="modelPassageiro()" title="Abrir opções passageiro">
@@ -128,26 +128,25 @@
 
         <div class="divCards model">
         </div>
-        <div class=" cm ">
-            <div class="cardsPassageiro">
+        <div class=" cm model">
+            <div class="cardsPassageiro ">
                 <div class="a model">
                     <div class="cardClone ">
-                        <img src="../login/assets/icons8-excluir-lixeira-100.png" alt="" width="20px">
+                        <button id="btneditP">EDITAR<img src="../login/assets/icons8-editar-propriedade-64.png" alt="" width="60px"></button>
                         <div class="divImp">
                             <img id="imgPassageiro" src="../login/assets/10966.jpg" alt="">
                         </div>
                         <div class="divInfos">
                             <div class="docInf">
-                                <img src="../login/assets/icons8-nome-96.png" alt="" width="20px">
+                                <img src="../login/assets/icons8-nome-96.png" alt="" width="30px">
                                 <span> Documentos / Informações</span>
                             </div>
 
-                            <p>RG</p><span id="nomePassageiro">A</span>
-                            <span id="cpfPassageiro">A</span>
-                            <span id="passaportePassageiro">A</span>
-                            <span id="nascimentoPassageiro">A</span>
-                            <span id="nacionalidadePassageiro">A</span>
-                            <span id="emailPassageiro">A</span>
+                            <span>NOME <span id="nomePassageiro" class="bold"> A</span></span>
+                            <span>CPF <span id="cpfPassageiro" class="bold"> A</span></span>
+                            <span>PASSAPORTE <span id="passaportePassageiro" class="bold"> A</span></span>
+                            <span>NACIONALIDADE <span id="nacionalidadePassageiro" class="bold">A</span></span>
+                            <span>EMAIL <span id="emailPassageiro" class="bold">A</span></span>
                         </div>
                     </div>
                 </div>
@@ -163,29 +162,29 @@
                 </div>
                 <form class="conteinerLab" id="myForm">
                     <div class="contentL">
-                        <label for="nome">Nome:</label>
+                        <label for="nome">Nome</label>
                         <input type="text" name="nome" required>
 
-                        <label for="passaporte">Passaporte:</label>
+                        <label for="passaporte">Passaporte</label>
                         <input type="text" name="passaporte">
 
-                        <label for="email">E-mail:</label>
+                        <label for="email">E-mail</label>
                         <input type="email" name="email" required>
 
-                        <label for="imagem">Imagem:</label>
+                        <label for="imagem">Imagem</label>
                         <input type="file" name="imagem" accept="image/*" id="file-upload" required>
                         <!-- <img src="../login/assets/icons8-imagem-100.png" alt=""> -->
                         <label for="file-upload" id="upload-label">Escolher arquivo</label>
 
                     </div>
                     <div class="contentL2">
-                        <label for="cpf">CPF:</label>
+                        <label for="cpf">CPF</label>
                         <input type="text" name="cpf" required>
-                        <label for="data_nascimento">Data de nascimento:</label>
+                        <label for="data_nascimento">Data de nascimento</label>
                         <input type="date" name="data_nascimento" id="nascimento" required>
-                        <label for="senha">Senha:</label>
+                        <label for="senha">Senha</label>
                         <input type="password" name="senha" required>
-                        <label for="nacionalidade">Nacionalidade:</label>
+                        <label for="nacionalidade">Nacionalidade</label>
                         <input type="text" name="nacionalidade" required>
                     </div>
                     <div class="butoes">
@@ -199,6 +198,25 @@
             </div>
         </div>
     </div>
+    <div class="modelEdit">
+        <div class="content-editP">
+            <div class="formP">
+                <h1>Editar dados do passageiro! .</h1>
+                <form class="formeditP"> 
+                    <img src="../login/assets/anime-wallpaper-aesthetic-gif.gif" alt="">
+                    <div class="infosedit">
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 
 </body>

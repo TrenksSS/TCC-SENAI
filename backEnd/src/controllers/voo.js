@@ -1,6 +1,6 @@
-const { PrismaClient } = require('@prisma/client');
+const { PrismaClient } = require('@prisma/client')
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient()
 
 const create = async (req, res) => {
     req.body.id_piloto = Number(req.body.id_piloto)
@@ -11,9 +11,9 @@ const create = async (req, res) => {
 
     let voo = await prisma.voo.create({
         data: req.body
-    });
+    })
 
-    res.status(200).json(voo).end();
+    res.status(200).json(voo).end()
 }
 
 const readOne = async (req, res) => {
@@ -36,9 +36,9 @@ const readOne = async (req, res) => {
             tripulacoes:true
 
         }
-    });
+    })
 
-    res.status(200).json(voo).end();
+    res.status(200).json(voo).end()
 }
 
 const read = async (req, res) => {
@@ -57,9 +57,9 @@ const read = async (req, res) => {
             passagens:true,
             tripulacoes:true
         }
-    });
+    })
 
-    res.status(200).json(manutencoes).end();
+    res.status(200).json(manutencoes).end()
 }
 
 

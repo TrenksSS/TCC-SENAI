@@ -1,6 +1,6 @@
-const { PrismaClient } = require('@prisma/client');
+const { PrismaClient } = require('@prisma/client')
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient()
 
 const create = async (req, res) => {
    
@@ -11,9 +11,9 @@ const create = async (req, res) => {
     
     let passagem = await prisma.passagem.create({
         data: req.body
-    });
+    })
 
-    res.status(200).json(passagem).end();
+    res.status(200).json(passagem).end()
 }
 
 const readOne = async (req, res) => {
@@ -30,9 +30,9 @@ const readOne = async (req, res) => {
             poltrona:true,
             descricao:true
         }
-    });
+    })
 
-    res.status(200).json(passagem).end();
+    res.status(200).json(passagem).end()
 }
 
 const read = async (req, res) => {
@@ -46,9 +46,9 @@ const read = async (req, res) => {
             poltrona:true,
             descricao:true
         }
-    });
+    })
 
-    res.status(200).json(passagens).end();
+    res.status(200).json(passagens).end()
 }
 
 

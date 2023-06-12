@@ -127,9 +127,8 @@ function preecherPass() {
     linha.querySelector("#nomePassageiro").innerHTML = ps.nome
     linha.querySelector("#cpfPassageiro").innerHTML = ps.cpf
     linha.querySelector("#passaportePassageiro").innerHTML = ps.passaporte
-    linha.querySelector("#nascimentoPassageiro").innerHTML = ps.data_nascimento.slice(0, 10)
     linha.querySelector("#nacionalidadePassageiro").innerHTML = ps.nacionalidade
-    linha.querySelector("#emailPassageiro").innerHTML = ps.nome
+    linha.querySelector("#emailPassageiro").innerHTML = ps.email
 
 
     divAppendPass.appendChild(linha)
