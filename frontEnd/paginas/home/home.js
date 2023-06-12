@@ -36,3 +36,6 @@ fetch("http://localhost:2550/passagens")
         let card = document.querySelector("#cardr")
         card.style = "display:flex"
     }
+    function comp() {
+        alert ( "compra reaisada ✅" )
+    }
