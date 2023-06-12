@@ -116,8 +116,13 @@ function preencherVoo() {
       v.data_saida.slice(11, 19)
     linha.querySelector("#spanDescricao").innerHTML = v.descricao
     listaVoo.appendChild(linha)
+
+
+
   })
 }
+
+const  btnConfirm = document.querySelector("#confirmEdit") 
 
 function preecherPass() {
   passageiro.forEach((ps) => {
@@ -129,9 +134,23 @@ function preecherPass() {
     linha.querySelector("#passaportePassageiro").innerHTML = ps.passaporte
     linha.querySelector("#nacionalidadePassageiro").innerHTML = ps.nacionalidade
     linha.querySelector("#emailPassageiro").innerHTML = ps.email
-
-
     divAppendPass.appendChild(linha)
+
+    linha.querySelector("#btneditP").addEventListener('click', () =>{
+      abremodalEdit()
+      btnConfirm.onclick = () => {editarPass(ps.id)}
+      document.querySelector("#nomeeditP").value = ps.nome
+      document.querySelector("#cpfeditP").value = ps.cpf
+      document.querySelector("#naeditP").value = ps.nacionalidade
+      document.querySelector("#paeditP").value = ps.passaporte
+      document.querySelector("#emaileditP").value = ps.email
+      document.querySelector(".imgeditP").src = "../../../uploads/" + ps.imagem
+
+      document.querySelector("#nascimeditP").value = ps.data_nascimento.slice(0,10)
+
+
+    })
+
   })
 }
 
@@ -247,4 +266,44 @@ function modelPassagens() {
   modal.classList.remove('aberto')
   botaoAbrir.classList.remove('model')
   botaoFechar.classList.add('model')
+}
+
+function abremodalEdit(){
+  console.log("oi")
+   document.querySelector(".modelEdit").classList.toggle('model')
+}
+
+
+function editarPass(id){
+     
+  let body = {
+    'nome':   document.querySelector("#nomeeditP").value ,
+    'cpf':document.querySelector("#cpfeditP").value,
+    'nacionalidade':document.querySelector('#naeditP').value,
+    'passaporte':document.querySelector('#paeditP').value,
+    'email':document.querySelector('#emaileditP').value
+
+}
+const options = {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+}
+options.body = JSON.stringify(body)
+if (body.nome.length > 0 && body.cpf.length > 0 && body.nacionalidade.length > 0 && body.passaporte.length > 0 && body.email.length > 0) {
+    fetch('http://localhost:2550/passageiros/'+id, options)
+        .then(resp => resp.status)
+        .then(data => {
+            if (data == 200) {
+
+                alert('Editado com SUCESSO! 😀✔')
+                setTimeout(() => { window.location.reload() }, 500);
+                
+            } else {
+                
+            }
+        })
+} else {
+    alert("Preencha todos os campos obrigatórios ❗")
+}
+
 }

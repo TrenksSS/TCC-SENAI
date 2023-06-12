@@ -415,6 +415,7 @@ label {
     font-weight: bold;
     background-color: #03379f;
     color: #ffffff;
+    outline: none;
 }
 
 .contentL2>input {
@@ -428,6 +429,7 @@ label {
     border: none;
     background-color: #03379f;
     color: #ffffff;
+    outline: none;
 }
 
 
