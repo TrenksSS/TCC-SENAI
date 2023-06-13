@@ -1,18 +1,18 @@
-const { PrismaClient } = require('@prisma/client');
+const { PrismaClient } = require('@prisma/client')
 
 const bcrypt = require('bcrypt')
 const jwt = require("jsonwebtoken")
-const multer = require('multer');
-const path = require('path');
+const multer = require('multer')
+const path = require('path')
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient()
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, '../uploads/');
+    cb(null, '../uploads/')
   },
   filename: function (req, file, cb) {
-    var datetimestamp = Date.now();
+    var datetimestamp = Date.now()
     cb(
       null,
       file.originalname.split('.')[0] +
@@ -20,24 +20,24 @@ const storage = multer.diskStorage({
         datetimestamp +
         '.' +
         file.originalname.split('.')[file.originalname.split('.').length - 1]
-    );
+    )
   },
-});
+})
 
-const upload = multer({ storage });
+const upload = multer({ storage })
 
 const create = async (req, res) => {
   upload.fields([
     { name: 'imagem', maxCount: 1 },
   ])(req, res, async (err) => {
     if (err) {
-      res.status(500).json({ error: 1, payload: err }).end();
+      res.status(500).json({ error: 1, payload: err }).end()
     } else {
       bcrypt.genSalt(10, function (err, salt) {
         if (err == null) {
           bcrypt.hash(req.body.senha, salt, async function (errCrypto, hash) {
             if (errCrypto == null) {
-              req.body.senha = hash;
+              req.body.senha = hash
 
               const funcionario = await prisma.funcionario.create({
                 data: {
@@ -49,20 +49,20 @@ const create = async (req, res) => {
                   imagem: req.files.imagem[0].filename,
                   status: req.body.status,
                 },
-              });
+              })
 
-              res.status(200).json(funcionario).end();
+              res.status(200).json(funcionario).end()
             } else {
-              res.status(500).json(errCrypto).end();
+              res.status(500).json(errCrypto).end()
             }
-          });
+          })
         } else {
-          res.status(500).json(err).end();
+          res.status(500).json(err).end()
         }
-      });
+      })
     }
-  });
-};
+  })
+}
 
 const login = async(req, res) => {
     const funcionario = await prisma.funcionario.findFirstOrThrow({
@@ -110,9 +110,9 @@ const readOne = async (req, res) => {
             imagem:true,
             status: true
         }
-    });
+    })
 
-    res.status(200).json(funcionario).end();
+    res.status(200).json(funcionario).end()
 }
 
 const read = async (req, res) => {
@@ -126,9 +126,9 @@ const read = async (req, res) => {
             imagem:true,
             status: true,
         }
-    });
+    })
 
-    res.status(200).json(funcionarios).end();
+    res.status(200).json(funcionarios).end()
 }
 
 

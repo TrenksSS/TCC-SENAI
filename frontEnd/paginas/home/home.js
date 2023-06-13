@@ -4,13 +4,13 @@ fetch("http://localhost:2550/passagens")
     })
     .then((data) => {
         data.forEach(todo => {
-            let novoItem = document.querySelector(".vt").cloneNode(true);
+            let novoItem = document.querySelector(".passagens").cloneNode(true);
 
             novoItem.classList.remove("model");
 
-            novoItem.querySelector("#modvt").append(todo.modelo);
-            novoItem.querySelector("#sta").append(todo.status);
-            novoItem.querySelector("#est").append(todo.estado);
+            novoItem.querySelector("#datap").append(todo.modelo);
+            novoItem.querySelector("#pida").append(todo.status);
+            novoItem.querySelector("#pvolta").append(todo.estado);
             
 
             list.appendChild(novoItem);
@@ -35,8 +35,8 @@ fetch("http://localhost:2550/passagens")
     function ca() {
         let card = document.querySelector("#cardr")
         card.style = "display:flex"
-    }
 
+    }
     const datap = document.querySelector("#datap")
     const part = document.querySelector("#partida")
     const dest = document.querySelector("#destino")
@@ -55,3 +55,7 @@ fetch("http://localhost:2550/passagens")
           .catch(err => console.error(err))
       
       }
+
+    function comp() {
+        alert ( "compra reaisada ✅" )
+    }
