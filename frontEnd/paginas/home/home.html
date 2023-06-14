@@ -15,12 +15,14 @@
   <title>BlueHorizon</title>
 </head>
 
-<body>
+<body onload="load()">
   <header>
     <img src="../../../assets/voo-de-aviao.png" id="logo" alt="" style="width: 60px;">
 
     <h1 id="titulo">Blue Horizon</h1>
-
+    <div class="volt">
+      <button onclick="voltarTela()">Voltar</button>
+    </div>
     <div id="user-h" onclick="am()">
       <img src="../../../assets/lista-de-usuarios.png" alt="" style="width: 30px;">
     </div>
@@ -51,11 +53,11 @@
       <h2 id="emp">Empresa</h2>
       <h2 id="empr">GOL</h2>
 
-      <h3 id="txp" >Prencha os dados para continuar a reserva da sua passagen</h3>
+      <h3 id="txp">Prencha os dados para continuar a reserva da sua passagen</h3>
 
       <form action="">
         <p id="nf">Nome</p>
-        <input id="nfin" type="text" required >
+        <input id="nfin" type="text" required>
 
         <p id="cp">CPF</p>
         <input id="cpin" type="text" required>
@@ -73,11 +75,11 @@
 
         <button id="resv" onclick="comp()">RESERVAR</button>
       </form>
-      <h2 id="polt" >Poltrona</h2>
+      <h2 id="polt">Poltrona</h2>
 
-      
 
-      <img id="lug" src="../../../assets/av_in-removebg.png" alt="lugares"  >
+
+      <img id="lug" src="../../../assets/av_in-removebg.png" alt="lugares">
 
       <select id="poltrona" name="" id="">
         <option value="">1</option>
@@ -136,7 +138,7 @@
   </div>
 
   <div id="pcard">
-    
+
   </div>
 
   <main>
@@ -147,7 +149,7 @@
 
         <img class="calendario" src="../../../assets/calendario.png" alt="calendario" style="width: 35px;">
         <img class="destino" src="../../../assets/destino.png" alt="lupa" style="width: 50px;">
-        
+
         <p class="datap" id="datap">04/12/2023</p>
         <p class="pida" id="partida">Cidade 1</p>
         <p class="pvolta" id="destino">Cidade 2</p>
@@ -156,10 +158,11 @@
         <button class="reserva" onclick="ca()">RESERVAR</button>
 
       </div>
-   
+
     </div>
   </main>
 
 </body>
 <script src="home.js"></script>
+
 </html>

@@ -274,47 +274,54 @@ body {
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-#lug{
+
+#lug {
     position: absolute;
     top: 10vh;
     right: 0px;
     width: 900px;
 }
-#poltrona{
+
+#poltrona {
     background-color: rgb(63, 154, 207);
     border-radius: 10px;
     width: 50px;
     height: 30px;
     position: absolute;
-    top :10vh;
+    top: 10vh;
     left: 70vw;
 }
-#tpar{
+
+#tpar {
     position: absolute;
     top: 10vh;
     left: 8vw;
     font-weight: bold;
 }
-#par{
+
+#par {
     position: absolute;
     top: 10vh;
     left: 15vw;
     font-weight: bold;
 }
-#tdes{
+
+#tdes {
     position: absolute;
     top: 10vh;
     left: 35vw;
     font-weight: bold;
 }
-#polt{
+
+#polt {
     position: absolute;
     top: 10vh;
     left: 63vw;
-    
+
 }
-#resv{
-    background-color:rgb(63, 154, 207) ;
+
+#resv {
+    background-color: rgb(63, 154, 207);
     position: absolute;
     width: 300px;
     height: 50px;
@@ -324,62 +331,69 @@ body {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
- #indest{
+#indest {
     position: absolute;
     width: 60px;
     top: 8vh;
     left: 30vw;
     font-weight: bold;
- }
-#des{
+}
+
+#des {
     position: absolute;
     top: 10vh;
     left: 42vw;
     font-weight: bold;
 }
 
-#dtp{
+#dtp {
     position: absolute;
     top: 20vh;
     left: 7vw;
     font-weight: bold;
 }
-#dtpass{
+
+#dtpass {
     position: absolute;
     top: 20.6vh;
     left: 12vw;
 }
 
-#htp{
+#htp {
     position: absolute;
     top: 20vh;
     left: 25vw;
     font-weight: bold;
 }
-#hor{
+
+#hor {
     position: absolute;
     top: 20.5vh;
     left: 30vw;
 }
-#emp{
+
+#emp {
     position: absolute;
     top: 20vh;
     left: 45vw;
     font-weight: bold;
 }
-#empr{
+
+#empr {
     position: absolute;
     top: 20vh;
     left: 53vw;
     font-weight: bold;
 }
-#txp{
+
+#txp {
     position: absolute;
     top: 27vh;
     left: 15vw;
     font-weight: bold;
 }
-#canr{
+
+#canr {
     font-size: 20px;
     font-weight: bold;
     color: white;
@@ -388,31 +402,34 @@ body {
     left: 87vw;
     border-radius: 10px;
     border: 0;
-    background-color:rgb(223, 75, 75) ;
+    background-color: rgb(223, 75, 75);
     width: 40px;
     height: 40px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
-#aviaoo{
+
+#aviaoo {
     position: absolute;
     top: 1vh;
     left: 1vw;
 }
-#titulocard{
+
+#titulocard {
     font-weight: bold;
 }
 
 
 /* --------------------------------------- INFO FORM */
 
-#nf{
+#nf {
     position: absolute;
     top: 33vh;
     left: 11vw;
     font-weight: bold;
     font-size: 20px;
 }
-#nfin{
+
+#nfin {
     position: absolute;
     top: 36vh;
     left: 11vw;
@@ -422,14 +439,15 @@ body {
     border-color: rgb(63, 154, 207);
 }
 
-#cp{
+#cp {
     position: absolute;
     top: 45vh;
     left: 11vw;
     font-weight: bold;
     font-size: 20px;
 }
-#cpin{
+
+#cpin {
     position: absolute;
     top: 48vh;
     left: 11vw;
@@ -439,14 +457,15 @@ body {
     border-color: rgb(63, 154, 207);
 }
 
-#ps{
+#ps {
     position: absolute;
     top: 33vh;
     left: 33vw;
     font-weight: bold;
     font-size: 20px;
 }
-#psin{
+
+#psin {
     position: absolute;
     top: 36vh;
     left: 33vw;
@@ -456,14 +475,15 @@ body {
     border-color: rgb(63, 154, 207);
 }
 
-#dn{
+#dn {
     position: absolute;
     top: 45vh;
     left: 33vw;
     font-weight: bold;
     font-size: 20px;
 }
-#dnin{
+
+#dnin {
     position: absolute;
     top: 48vh;
     left: 33vw;
@@ -472,14 +492,16 @@ body {
     border-radius: 5px;
     border-color: rgb(63, 154, 207);
 }
-#nc{
+
+#nc {
     position: absolute;
     top: 55vh;
     left: 20vw;
     font-weight: bold;
     font-size: 20px;
 }
-#ncin{
+
+#ncin {
     position: absolute;
     top: 58vh;
     left: 20vw;
@@ -488,8 +510,33 @@ body {
     border-radius: 5px;
     border-color: rgb(63, 154, 207);
 }
-#inf{
+
+#inf {
     position: absolute;
     top: 75vh;
     left: 38vw;
+}
+
+.volt {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    top: 2.8%;
+    left: 22%;
+}
+
+.volt>button {
+    width: 150px;
+    height: 45px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: rgb(63, 154, 207);
+    border: 2px solid rgb(63, 154, 207);
+    border-radius: 15px;
+    color: white;
+}
+
+a {
+    width: 1000px;
+    background-color: antiquewhite;
 }

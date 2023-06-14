@@ -122,7 +122,7 @@ function preencherVoo() {
   })
 }
 
-const  btnConfirm = document.querySelector("#confirmEdit") 
+const btnConfirm = document.querySelector("#confirmEdit")
 
 function preecherPass() {
   passageiro.forEach((ps) => {
@@ -136,9 +136,9 @@ function preecherPass() {
     linha.querySelector("#emailPassageiro").innerHTML = ps.email
     divAppendPass.appendChild(linha)
 
-    linha.querySelector("#btneditP").addEventListener('click', () =>{
+    linha.querySelector("#btneditP").addEventListener('click', () => {
       abremodalEdit()
-      btnConfirm.onclick = () => {editarPass(ps.id)}
+      btnConfirm.onclick = () => { editarPass(ps.id) }
       document.querySelector("#nomeeditP").value = ps.nome
       document.querySelector("#cpfeditP").value = ps.cpf
       document.querySelector("#naeditP").value = ps.nacionalidade
@@ -146,7 +146,7 @@ function preecherPass() {
       document.querySelector("#emaileditP").value = ps.email
       document.querySelector(".imgeditP").src = "../../../uploads/" + ps.imagem
 
-      document.querySelector("#nascimeditP").value = ps.data_nascimento.slice(0,10)
+      document.querySelector("#nascimeditP").value = ps.data_nascimento.slice(0, 10)
 
 
     })
@@ -157,16 +157,15 @@ function preecherPass() {
 
 var search_btn = document.querySelector('.buscarInp')
 const input_Busca = document.querySelector('.buscarInp')
-const tabela_Voo = document.querySelector('.divCards')
+const tabela_Voo = document.querySelector('.cardsPassageiro')
 
 search_btn.addEventListener('keyup', () => {
 
   let expressao = input_Busca.value.toLowerCase() // convertendo para lowercase
 
 
-  let linhas = tabela_Voo.getElementsByClassName('cardPrin')
+  let linhas = tabela_Voo.getElementsByClassName('cardClone')
 
-  console.log("oi")
 
   for (let posicao in linhas) {
     if (true === isNaN(posicao)) {
@@ -268,42 +267,42 @@ function modelPassagens() {
   botaoFechar.classList.add('model')
 }
 
-function abremodalEdit(){
+function abremodalEdit() {
   console.log("oi")
-   document.querySelector(".modelEdit").classList.toggle('model')
+  document.querySelector(".modelEdit").classList.toggle('model')
 }
 
 
-function editarPass(id){
-     
+function editarPass(id) {
+
   let body = {
-    'nome':   document.querySelector("#nomeeditP").value ,
-    'cpf':document.querySelector("#cpfeditP").value,
-    'nacionalidade':document.querySelector('#naeditP').value,
-    'passaporte':document.querySelector('#paeditP').value,
-    'email':document.querySelector('#emaileditP').value
+    'nome': document.querySelector("#nomeeditP").value,
+    'cpf': document.querySelector("#cpfeditP").value,
+    'nacionalidade': document.querySelector('#naeditP').value,
+    'passaporte': document.querySelector('#paeditP').value,
+    'email': document.querySelector('#emaileditP').value
 
-}
-const options = {
+  }
+  const options = {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
-}
-options.body = JSON.stringify(body)
-if (body.nome.length > 0 && body.cpf.length > 0 && body.nacionalidade.length > 0 && body.passaporte.length > 0 && body.email.length > 0) {
-    fetch('http://localhost:2550/passageiros/'+id, options)
-        .then(resp => resp.status)
-        .then(data => {
-            if (data == 200) {
+  }
+  options.body = JSON.stringify(body)
+  if (body.nome.length > 0 && body.cpf.length > 0 && body.nacionalidade.length > 0 && body.passaporte.length > 0 && body.email.length > 0) {
+    fetch('http://localhost:2550/passageiros/' + id, options)
+      .then(resp => resp.status)
+      .then(data => {
+        if (data == 200) {
 
-                alert('Editado com SUCESSO! 😀✔')
-                setTimeout(() => { window.location.reload() }, 500);
-                
-            } else {
-                
-            }
-        })
-} else {
+          alert('Editado com SUCESSO! 😀✔')
+          setTimeout(() => { window.location.reload() }, 500);
+
+        } else {
+
+        }
+      })
+  } else {
     alert("Preencha todos os campos obrigatórios ❗")
-}
+  }
 
 }

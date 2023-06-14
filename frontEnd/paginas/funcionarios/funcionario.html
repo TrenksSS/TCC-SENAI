@@ -58,14 +58,16 @@
                 <input class="buscarInp" type="text" placeholder="Pesquise aqui...">
                 <i class='bx bx-search'></i>
             </div>
-            <button class="inpBusca2" onclick="modelPassageiro()" title="Abrir opções passageiro">
+            <button class="inpBusca0" onclick="modelPassageiro()" title="Abrir opções passageiro">
                 <span>passageiros</span>
                 <img src="../login/assets/icons8-assento-de-voo-64.png" width="30px" height="30px" alt="">
             </button>
-            <button class="inpBusca2" onclick="modelPassagens()">
-                <span>passagens</span>
-                <img src="../login/assets/icons8-cartão-de-embarque-64.png" width="30px" height="30px" alt="">
-            </button>
+            <a href="../home/home.html">
+                <button class="inpBusca2">
+                    <span>passagens</span>
+                    <img src="../login/assets/icons8-cartão-de-embarque-64.png" width="30px" height="30px" alt="">
+                </button>
+            </a>
             <div class="inpBusca3">
                 <span>Perfil</span>
                 <button id="abrir-modal"><img src="../login/assets/icons8-divisa-circulada-à-abaixo-64.png"
@@ -77,6 +79,7 @@
 
     </header>
     <main>
+
         <div class="modal">
             <div class="modalPerfil">
                 <div class="infosFunc">
@@ -112,27 +115,22 @@
                     </div> <span id="statusFunc">Antônio de
                         Lima Reis</span>
                 </div>
-
-
                 <a title="Sair" onclick="localStorage.clear()" class="aHead"
                     href="./telaLoginFunc/loginFunc.html">Logout</a><i class="far fa-togoout icon-modify"></i>
             </div>
-
         </div>
         <div class="btnCadastroPass ">
             <div id="passageiroNovo"><span id="spanNovopass">Cadastrar</span><button onclick="removeModelCad()"
                     id="btnCadPassageiro" title="Cadastrar passageiro">+</button>
             </div>
         </div>
-
-
         <div class="divCards model">
         </div>
         <div class=" cm ">
             <div class="cardsPassageiro ">
                 <div class="a model">
                     <div class="cardClone ">
-                        <button  id="btneditP">EDITAR<img src="../login/assets/icons8-editar-propriedade-64.png" alt=""
+                        <button id="btneditP">EDITAR<img src="../login/assets/icons8-editar-propriedade-64.png" alt=""
                                 width="60px"></button>
                         <div class="divImp">
                             <img id="imgPassageiro" src="../login/assets/10966.jpg" alt="">

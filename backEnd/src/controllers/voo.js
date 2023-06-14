@@ -3,8 +3,6 @@ const { PrismaClient } = require('@prisma/client')
 const prisma = new PrismaClient()
 
 const create = async (req, res) => {
-    req.body.id_piloto = Number(req.body.id_piloto)
-    req.body.id_veiculo = Number(req.body.id_veiculo)
     req.body.valor_Max = Number(req.body.valor_Max)
     req.body.valor_Min = Number(req.body.valor_Min)
 
@@ -22,18 +20,15 @@ const readOne = async (req, res) => {
             id: Number(req.params.id)
         },
         select: {
-            id:true,
-            id_piloto: true,
-            id_veiculo:true,
-            data_saida:true,
-            destino:true,
-            hora:true,
-            empresa:true,
-            valor_Max:true,
-            valor_Min:true,
-            descricao:true,
-            passagens:true,
-            tripulacoes:true
+            id: true,
+            data_saida: true,
+            destino: true,
+            hora: true,
+            empresa: true,
+            valor_Max: true,
+            valor_Min: true,
+            descricao: true,
+            passagens: true,
 
         }
     })
@@ -44,18 +39,15 @@ const readOne = async (req, res) => {
 const read = async (req, res) => {
     let manutencoes = await prisma.voo.findMany({
         select: {
-            id:true,
-            id_piloto: true,
-            id_veiculo:true,
-            data_saida:true,
-            destino:true,
-            hora:true,
-            empresa:true,
-            valor_Max:true,
-            valor_Min:true,
-            descricao:true,
-            passagens:true,
-            tripulacoes:true
+            id: true,
+            data_saida: true,
+            destino: true,
+            hora: true,
+            empresa: true,
+            valor_Max: true,
+            valor_Min: true,
+            descricao: true,
+            passagens: true,
         }
     })
 

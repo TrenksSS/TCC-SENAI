@@ -70,7 +70,7 @@ main {
 }
 
 .inpBusca,
-.inpBusca2 {
+.inpBusca0 {
     padding: 10px;
     width: 25%;
     display: flex;
@@ -82,6 +82,20 @@ main {
     border: 3px solid #03379f;
 
 }
+
+.inpBusca2 {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: transparent;
+    border: 3px solid #03379f;
+
+}
+
 
 .inpBusca {
     padding: 10px;
@@ -126,6 +140,11 @@ main {
     background-color: rgba(255, 250, 240, 0.889);
 }
 
+.inpBusca0:hover {
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: rgba(255, 250, 240, 0.889);
+}
 
 
 .inpBusca2>span {
@@ -136,6 +155,16 @@ main {
     border: none;
     outline: none;
 }
+
+.inpBusca0>span {
+    width: 80%;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
 
 .inpBusca3>span {
     width: 80%;
@@ -175,6 +204,7 @@ main {
 }
 
 .inpBusca2,
+.inpBusca0,
 .inpBusca3 {
     gap: 10px;
     color: #03379f;
