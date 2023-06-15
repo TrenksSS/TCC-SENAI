@@ -1,21 +1,4 @@
-fetch("http://localhost:2550/passagens")
-    .then((res) => {
-        return res.json();
-    })
-    .then((data) => {
-        data.forEach(todo => {
-            let novoItem = document.querySelector(".passagens").cloneNode(true);
 
-            novoItem.classList.remove("model");
-
-            novoItem.querySelector("#datap").append(todo.modelo);
-            novoItem.querySelector("#pida").append(todo.status);
-            novoItem.querySelector("#pvolta").append(todo.estado);
-
-
-            list.appendChild(novoItem);
-        });
-    });
 
 function am() {
     let card = document.querySelector("#ham")
@@ -57,7 +40,31 @@ function loadVoo() {
 }
 
 function comp() {
-    alert("compra reaisada ✅")
+    alert("compra realisada ✅")
+}
+
+const list = document.querySelector('#passagens')
+function loadPassagens() {
+
+    fetch("http://localhost:2550/passagens")
+        .then((res) => {
+            return res.json();
+        })
+        .then((data) => {
+            data.forEach(todo => {
+                console.log(todo)
+                let novoItem = document.querySelector(".dest").cloneNode(true);
+
+                novoItem.classList.remove("model");
+
+                novoItem.querySelector(".datap").innerHTML = todo.tipo;
+                novoItem.querySelector(".pida").innerHTML = todo.valor;
+                novoItem.querySelector(".pvolta").innerHTML = todo.id_voo;
+                console.log(novoItem.querySelector(".datap").innerHTML)
+
+                list.appendChild(novoItem);
+            });
+        });
 }
 
 function voltarTela() {
@@ -67,13 +74,17 @@ function voltarTela() {
 
 function load() {
     verify()
+    teste()
+    loadPassagens()
+}
+
+function teste() {
+    document.querySelector('.datap').innerHTML = "opa"
 }
 
 function verify() {
     var funcinfo = JSON.parse(localStorage.getItem("@funinfo"))
-    console.log(funcinfo)
     if (funcinfo == null) {
-        console.log("oi")
         document.querySelector('.volt').style.display = 'none'
     } else {
         document.querySelector('.volt').style.display = 'flex'
